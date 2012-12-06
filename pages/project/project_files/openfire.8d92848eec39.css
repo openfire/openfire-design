@@ -1,0 +1,164 @@
+@media all and (min-width: 480px) {
+  #superbar ul li a {
+    color: #f7551e; } }
+@media all and (max-width: 768px) {
+  #superbar ul li a {
+    color: #f57220; } }
+#superbar {
+  z-index: 1000; }
+  #superbar .navbar-inner {
+    min-height: 38px;
+    height: 38px;
+    font-size: 10pt; }
+  #superbar .brand {
+    padding: 0px; }
+  #superbar ul li a {
+    padding: 0px 0px 0px 0px;
+    margin: 8px 0px 0px 15px; }
+
+.of-dialog {
+  min-height: 200px;
+  max-height: 500px; }
+  .of-dialog .hd {
+    height: 60px;
+    margin: 5px;
+    text-align: center; }
+    .of-dialog .hd .title {
+      font-size: 14pt;
+      font-weight: bold;
+      text-decoration: underline; }
+    .of-dialog .hd .close-dialog {
+      float: right; }
+  .of-dialog .alerts {
+    position: absolute;
+    width: 96%;
+    margin-left: 2%;
+    min-height: 50px;
+    max-height: 50%;
+    overflow-y: auto;
+    z-index: -1; }
+    .of-dialog .alerts .alert {
+      min-height: 90px; }
+  .of-dialog .dialog-content {
+    width: 98%;
+    overflow-y: auto;
+    margin-left: 1%;
+    margin-right: 1%; }
+  .of-dialog .dialog-buttons {
+    float: right; }
+
+@media all and (max-width: 479px) {
+  .of-dialog {
+    width: 90%;
+    height: 80%;
+    top: 2%;
+    left: 4%; }
+
+  .dialog-content {
+    height: 81%; } }
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .of-dialog {
+    width: 450px;
+    height: 80%;
+    margin-left: -225px;
+    top: 5%;
+    left: 50%; }
+
+  .dialog-content {
+    height: 81%; } }
+@media all and (min-width: 768px) {
+  .of-dialog {
+    width: 700px;
+    height: 70%;
+    margin-left: -350px; }
+
+  .dialog-content {
+    height: 81%; } }
+body {
+  background-color: white; }
+
+.boxed {
+  border: 1px solid black; }
+
+html, body {
+  height: 100%; }
+
+#body-wrapper {
+  min-height: 100%; }
+
+#body-main {
+  overflow: auto;
+  padding-bottom: 30px; }
+
+#footer-container {
+  position: relative;
+  margin-top: -30px;
+  height: 30px;
+  clear: both;
+  overflow: hidden; }
+
+#footer-left {
+  float: left;
+  margin-left: 10px; }
+
+#footer-right {
+  float: right;
+  margin-right: 10px; }
+  #footer-right a {
+    color: #f64202; }
+
+#footer-top {
+  height: 30px;
+  background-color: #dddddd;
+  padding-top: 4px; }
+
+#footer-bottom {
+  height: 0px; }
+  #footer-bottom hr {
+    margin: 0px;
+    border: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    background-color: #e47532; }
+  #footer-bottom .feedback {
+    background-color: #dddddd; }
+    #footer-bottom .feedback .feedback-submit {
+      position: relative;
+      top: -20px;
+      left: 20px; }
+  #footer-bottom .hd {
+    padding-left: 15px;
+    padding-top: 10px; }
+  #footer-bottom textarea {
+    height: 175px;
+    width: 35%;
+    min-width: 300px;
+    margin-left: 20px; }
+
+#my-project-select {
+  float: right; }
+
+.feedback-slide-out {
+  padding: 20px;
+  width: 250px;
+  height: 550px;
+  background: #cccccc;
+  border: 1px solid #cccccc; }
+  .feedback-slide-out .feedback-toggle {
+    width: 130px;
+    height: 30px; }
+  .feedback-slide-out .hd {
+    font-size: 14pt;
+    text-decoration: underline;
+    padding-bottom: 15px; }
+  .feedback-slide-out textarea {
+    width: 250px;
+    height: 220px;
+    margin-bottom: 5px; }
+  .feedback-slide-out button {
+    float: right; }
+  .feedback-slide-out #feedback-saved, .feedback-slide-out #feedback-error {
+    width: 120px; }
+
+.datepicker {
+  z-index: 9999 !important; }

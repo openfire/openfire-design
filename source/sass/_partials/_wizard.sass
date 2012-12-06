@@ -1,0 +1,83 @@
+.of-wizard
+    height: 100%
+    .hd
+        margin: 5px
+        text-align: center
+
+        .title
+            font-size: 14pt
+            font-weight: bold
+            text-decoration: underline
+
+        .close-wizard
+            float: right
+
+    .navbar
+        margin-bottom: 0px
+
+    .navbar-inner .container ul li a
+        color: #199C9A
+
+    .alerts
+        position: absolute
+        width: 96%
+        margin-left: 2%
+        min-height: 50px
+        max-height: 50%
+        overflow-y: auto
+        z-index: -1
+
+        .alert
+            min-height: 90px
+
+    .tab-content
+        overflow-y: scroll
+
+    .tab-pane
+        width: 98%
+        margin-left: 1%
+        margin-right: 1%
+
+        .tab-hd
+            text-align: left
+            margin-left: 20px
+            text-decoration: underline
+
+
+@media all and (max-width: 479px)
+    .of-wizard-modal
+        width: 90%
+        height: 80%
+        top: 2%
+        left: 4%
+
+    .tab-content
+        height: 59%
+
+    .navbar-inner .container ul li a
+        padding: 10px 12px 10px 12px
+        font-size: 10pt
+
+@media all and (min-width: 480px) and (max-width: 768px)
+    .of-wizard-modal
+        width: 450px
+        height: 80%
+        margin-left: -225px
+        top: 5%
+        left: 50%
+
+    .tab-content
+        height: 78%
+
+    .navbar-inner .container ul li a
+        padding: 10px 12px 10px 12px
+        font-size: 10pt
+
+@media all and (min-width: 768px)
+    .of-wizard-modal
+        width: 700px
+        height: 70%
+        margin-left: -350px
+
+    .tab-content
+        height: 75%

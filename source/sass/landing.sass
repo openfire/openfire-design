@@ -1,0 +1,155 @@
+#landing-hd
+    text-align: center
+    background-color: #CCCCCC
+    margin-bottom: 15px
+    border-radius: 5px
+
+#placeholder
+    .content
+        padding-top: 50px
+        text-align: center
+
+/* beta page */
+#sub-text
+    font-size: 16pt
+    position: relative
+    top: -25px
+    letter-spacing: 8px
+
+/* landing page */
+#hd-sub-text
+    position: relative
+    top: -15px
+    letter-spacing: 8px
+
+#notify-text
+    font-size: 10pt
+
+#notify-me-form
+    margin: 0px
+
+#notify-me
+    background-color: #DDD
+    padding: 10px
+
+    span
+        display: block
+
+    label
+        font-size: 14pt
+
+    input
+        width: 200px
+
+    textarea
+        width: 404px
+        height: 100px
+        margin: 4px
+
+    button
+        border-radius: 4px
+        margin-top: 5px
+
+.landing-graph-table
+    width: 100%
+    min-height: 400px
+
+    .graph-label
+        text-decoration: underline
+        font-size: 10pt
+        margin-left: 15px
+
+    .landing-graph-row
+        min-height: 200px
+
+        .landing-graph-cell
+            display: inline-block
+            padding: 10px
+            float: left
+
+            .graph
+
+/* Graph responsive sizes */
+@media (max-width: 479px) /* Mobile: span6 is 100% */
+    .landing-graph-table
+        .graph
+            height: 200px
+            width: 300px
+        .landing-graph-cell
+            float: none
+
+@media (min-width: 480px) and (max-width: 767px) /* Tablet/smartphone: span6 is 100% */
+    .landing-graph-table .graph
+        height: 250px
+        width: 400px
+
+@media (min-width: 768px) and (max-width: 979px) /* Narrow Desktop: span6 is < 352px */
+    .landing-graph-table .graph
+        height: 150px
+        width: 150px
+
+@media (min-width: 980px) and (max-width: 1199px) /* Desktop: span6 is 460px */
+    .landing-graph-table .graph
+        height: 200px
+        width: 200px
+
+@media (min-width: 1200px) /* Wide-screen Desktop: span6 is 570px */
+    .landing-graph-table .graph
+        height: 250px
+        width: 250px
+
+
+#project-cards-title
+    padding: 15px 0px 20px 3px
+    font-size: 18pt
+
+#project-cards-wrapper
+    width: 100%
+    overflow: auto
+
+#project-cards
+    height: 185px
+
+#project-filter-list
+    height: 0px
+    overflow: hidden
+
+#project-card-footer
+    margin-top: 10px
+    height: 25px
+    a
+        float: right
+
+.homepage-filter-list
+    width: 200px
+    float: right
+
+#landing-graph-metrics
+
+    .site-metric
+        margin-top: 5px
+
+        .metric-lbl
+            padding: 0px
+            margin: 0px
+
+        .metric-post-lbl
+            margin-left: 60px
+
+        .project-count
+            font-size: 18pt
+            color: #FF7300
+            margin-left: 75px
+            margin-top: 2px
+
+        .total-raised
+            font-size: 26pt
+            color: #05A40D
+            margin-left: 10px
+            margin-top: 5px
+
+        .total-donations
+            font-size: 22pt
+            color: #00747A
+            padding: 5px
+            margin-left: 20px

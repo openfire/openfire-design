@@ -1,0 +1,274 @@
+/* Widget styles */
+
+// modal dialog
+.pre-modal
+  display: none
+
+.modal-dialog
+  background-color: white
+  padding: 10px
+  border: 1px solid #dadada
+  z-index: 998
+
+  .modal-content
+    color: black
+    overflow-y: auto
+
+  .modal-title,
+  .modal-close
+    font:
+      family: 'Karla', sans-serif
+      size: 13px
+      weight: 700
+    line-height: 12px
+    text-transform: uppercase
+    cursor: pointer
+
+  .modal-close
+    color: #393939
+    right: 5px
+    top: 5px
+    padding: 3px
+    border-radius: 2px
+    opacity: 0.5
+
+    &:hover
+      cursor: pointer
+      background-color: #e3e3ee
+      opacity: 1
+
+  .modal-ui
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 22px
+    background-color: white
+    border-bottom-right-radius: 7px
+    border-bottom-left-radius: 7px
+
+    .modal-title
+      color: #5e5e5e
+      max-width: 400px
+      left: 5px
+      bottom: 3px
+      padding: 3px
+
+
+
+// accordion
+.accordion
+  position: relative
+
+  a
+    &.accordion-link
+      display: block
+
+// uploader
+.upload
+  .upload-progress
+    display: inline-block
+    height: 6px
+    background-color: rgba(100,100,100,0.5)
+    background-image: url(data:image/gif;base64,R0lGODlhEAAQAIABAPv8/f///yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkE3RUU0Qzk4Mjc0MTFFMTk2NzhDODRCNkQ4MUU0QjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkE3RUU0Q0E4Mjc0MTFFMTk2NzhDODRCNkQ4MUU0QjgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QTdFRTRDNzgyNzQxMUUxOTY3OEM4NEI2RDgxRTRCOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QTdFRTRDODgyNzQxMUUxOTY3OEM4NEI2RDgxRTRCOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAkKAAEALAAAAAAQABAAAAImDB6ZB2romHtTxnaxgpsvb3XaM5JZBXqmiJZq+LWofLL156a5VgAAIfkECQoAAQAsAAAAABAAEAAAAiaEg2iQyr1aOJAm697FseqJgV+3jSEpSiionl9atS+60q45c3dTAAAh+QQJCgABACwAAAAAEAAQAAACJgSCaJdh7V6TaUFbqdI4s/2BkxaFnThe5MqqYTm+5wl7bnzbeFMAACH5BAkKAAEALAAAAAAQABAAAAIkRH6gmMbqEHyLxjCt3u3i2jGfB4aUmElkOXLmC6cxK8vt6WIFACH5BAkKAAEALAAAAAAQABAAAAIkjA15qJewwluTNgZtxrFy3W2fI0oXE5aeqZ4rC8bj/NZtm4YFACH5BAkKAAEALAAAAAAQABAAAAImjAN5lrC9kDrwTXaxo1luHlWg9WFhJ3pnmapc6WorOVv1+J63VgAAIfkECQoAAQAsAAAAABAAEAAAAiWMgaYIGuxeWpM2G6Grh8vsheLVkeU2oqZkatgLd+CaovMds0EBACH5BAUKAAEALAAAAAAQABAAAAIlTICmCHrpWISLGvvadJljOWnXZ4GV2IXqOqJp5ZGxS9JlzbZGAQA7)
+    background-size: 16px 16px
+    border-radius: 4px
+    border: 1px solid rgba(100,100,100,0.25)
+
+  .upload-done
+    display: inline-block
+    height: 6px
+    background-image: url(data:image/gif;base64,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)
+    background-size: 16px 16px
+    border-radius: 4px
+    border: 1px solid transparent
+
+// editor
+.editable,
+.mini-editable
+  border: none
+  cursor: pointer
+  line-height: 12px
+
+  &:hover,
+  &:focus
+
+    &::before
+      color: rgba(0,0,0,0.3)
+      content: "double click to edit"
+
+
+  &:focus
+    cursor: text
+
+  &::before
+    cursor: pointer
+    background-color: rgba(255,255,255,0.5)
+    display: block
+    content: "edit"
+    color: rgba(0,0,0,0.15)
+    font:
+      family: "Karla"
+      size: 10px
+      weight: 700
+    text-transform: uppercase
+    margin-top: -6px
+    margin-bottom: -5px
+
+  &.editing::before
+    color: rgba(0,0,0,0.5)
+    content: "editing . . . double click to save"
+
+  &.saving::before
+    color: rgba(0,0,0,0.3)
+    content: "saving . . ."
+
+.editor
+  -webkit-transition-property: top, opacity
+  -webkit-transition-duration: 175
+  opacity: 0
+  z-index: 1
+  width: auto
+  top: -45px
+
+  span
+    display: block
+
+  &.active
+    opacity: 1
+    z-index: 999
+    top: 10px
+
+  .editorbutton
+    color: #737377
+    margin: 5px
+    display: inline-block
+
+    &::after
+      display: none
+      position: fixed
+      top: 25px
+      right: 15%
+      color: #333
+      content: attr(value)
+      background-color: #bada55
+
+    &:hover
+      color: #aaa
+
+      &::after
+        display: block
+
+  .editorstep
+    text-align: center
+
+// scroller
+.scroller-frame
+  width: 250px
+  height: 350px
+  overflow: hidden
+  background-color: yellow
+
+.scroller-pane
+  width: 250px
+  height: 350px
+  white-space: normal
+  position: relative
+  padding: 0px
+  margin-right: 10px
+  background-color: blue
+
+  & p
+    padding: 0px 7px
+
+// tabs
+.tabset.default
+  text-align: center
+  max-width: 600px
+
+  .tab-rounded
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+
+  .tab-link,
+  .tab-rounded
+    cursor: pointer
+    margin: 0 3px -1px
+    padding: 15px 10px
+    border: 1px solid #6f6f66
+    +background(linear-gradient(top, #d0d0d0, #e7e7ee))
+    font:
+      size: 12px
+      weight: 700
+    text-transform: uppercase
+    line-height: 11px
+    text-decoration: none
+    color: #444
+
+    &.current-tab
+      z-index: 9999
+      background: #e7e7e7 !important
+      border-bottom-color: #e7e7ee !important
+
+  .tab-link
+    display: inline-block
+  .tab-wrapper
+    border-radius: 5px
+    padding: 5px
+    background-color: #e7e7ee
+    border: 1px solid #6e6e66
+    height: 400px
+    overflow: auto
+  .tab
+    text-align: left
+
+
+// openfire specific widgets
+input.autocomplete
+  margin: 0 auto
+  display: block
+  font-size: 16pt
+  font-family: "Karla"
+  padding: 10px
+  border-radius: 3px
+  border: 1px solid #ccc
+  line-height: 18pt
+  vertical-align: middle
+  box-shadow: inset 1px 1px 3px 2px rgba(0,0,0,0.1)
+
+.autocomplete-results
+  -webkit-transition-duration: 0.05s
+  -webkit-transition-property: opacity
+  opacity: 0
+  background-color: whitesmoke
+
+  &.active
+    z-index: 998
+    opacity: 1
+
+  .autocomplete-result
+    border: 1px solid
+    border-top-color: #eee
+    border-left-color: #eee
+    border-right-color: #cecece
+    border-bottom-color: #cecece
+
+    &:hover
+      cursor: pointer
+      background-color: #dedede
+
+    h4
+      color: black
+      margin: 0px auto
+      display: block
+      padding: 5px
+
+      &.disabled
+        font-size: 11px
+        text-align: center
+        font-weight: 400
+        font-style: italic
+        color: #777
+
+        &:hover
+          cursor: auto
+          background-color: transparent

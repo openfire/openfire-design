@@ -1,0 +1,68 @@
+.of-dialog
+    min-height: 200px
+    max-height: 500px
+
+    .hd
+        height: 60px
+        margin: 5px
+        text-align: center
+
+        .title
+            font-size: 14pt
+            font-weight: bold
+            text-decoration: underline
+
+        .close-dialog
+            float: right
+
+    .alerts
+        position: absolute
+        width: 96%
+        margin-left: 2%
+        min-height: 50px
+        max-height: 50%
+        overflow-y: auto
+        z-index: -1
+
+        .alert
+            min-height: 90px
+
+    .dialog-content
+        width: 98%
+        overflow-y: auto
+        margin-left: 1%
+        margin-right: 1%
+
+    .dialog-buttons
+        float: right
+
+
+@media all and (max-width: 479px)
+    .of-dialog
+        width: 90%
+        height: 80%
+        top: 2%
+        left: 4%
+
+    .dialog-content
+        height: 81%
+
+@media all and (min-width: 480px) and (max-width: 768px)
+    .of-dialog
+        width: 450px
+        height: 80%
+        margin-left: -225px
+        top: 5%
+        left: 50%
+
+    .dialog-content
+        height: 81%
+
+@media all and (min-width: 768px)
+    .of-dialog
+        width: 700px
+        height: 70%
+        margin-left: -350px
+
+    .dialog-content
+        height: 81%

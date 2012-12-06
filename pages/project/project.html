@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://localhost:8000/savetheeverything/# -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>openfire: Save The Everything</title>
+        <meta name="description" content="openfire">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- TODO: Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="./../../source/images/favicon.ico">
+
+        <link rel="stylesheet" href="./../../third_party/normalize.css" type="text/css">
+        <link rel="stylesheet" href="./../../third_party/main.css" type="text/css">
+        <div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script src="./../../third_party/ga.js"></script><script src="./../../third_party/modernizr-2.6.2.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="./../../third_party/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="./../../third_party/bootstrap-responsive.min.css" type="text/css">
+
+        <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+        <script type="text/javascript" src="./../../third_party/css3-mediaqueries.js"></script>
+
+        <!-- Date picker -->
+        <link href="./../../third_party/datepicker.css" rel="stylesheet" type="text/css">
+
+        <!-- NVD3 -->
+        <link href="./../../third_party/nv.d3.css" rel="stylesheet" type="text/css">
+
+        <!-- openfire css -->
+        <link rel="stylesheet" href="./project_files/openfire.8d92848eec39.css" type="text/css">
+
+
+    <link rel="stylesheet" href="./project_files/project.fdd6892099e2.css" type="text/css">
+
+
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="body-wrapper">
+
+            <div id="body-main">
+                <!-- Header -->
+                <div id="header-container">
+                    <header id="superbar" class="clearfix" role="banner">
+
+                            <div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="http://localhost:8000/">
+            <div id="of-small-logo">
+                <img src="./../../source/images/logo/of_small_transparent.png">
+            </div>
+        </a>
+        <ul class="nav pull-left hidden-phone">
+
+            <li><a href="http://localhost:8000/" title="openfire home">Home</a></li>
+            <li><a href="http://localhost:8000/projects/" title="browse all projects">All Projects</a></li>
+            <li><a href="http://localhost:8000/propose/" title="project proposal page">Propose a Project</a></li>
+
+        </ul>
+        <ul class="nav pull-right">
+
+                <li class="dropdown">
+                    <a href="./project_files/project.html" class="dropdown-toggle" data-toggle="dropdown">
+                        Hello, Ethan
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li class="visible-phone"><a href="http://localhost:8000/" title="openfire home">Home</a></li>
+                        <li class="visible-phone"><a href="http://localhost:8000/projects/" title="browse all projects">All Projects</a></li>
+                        <li class="visible-phone"><a href="http://localhost:8000/propose/" title="project proposal page">Propose a Project</a></li>
+                        <li class="divider visible-phone"></li>
+
+                        <li><a href="http://localhost:8000/me/">my profile</a></li>
+                        <li><a href="http://localhost:8000/account/">my account</a></li>
+                        <li><a href="http://localhost:8000/logout/">sign out</a></li>
+
+                            <li class="divider"></li>
+                            <li>&nbsp;My projects</li>
+
+                                <li><a href="http://localhost:8000/savetheeverything/">Save The Everything</a></li>
+
+
+                    </ul>
+                </li>
+
+        </ul>
+    </div>
+</div>
+
+
+                    </header>
+                </div>
+
+                <!-- Main Content -->
+                <div id="main-container">
+                    <div id="main" class="wrapper clearfix" role="main">
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="span9">
+                <div id="video-chooser-dlg" style="display: none;" class="modal">
+    <div class="dlg-hd-txt">Enter the Vimeo url and Video ID</div>
+    <form>
+        <div>
+            <label>URL:</label>
+            <input type="text" name="url">
+        </div>
+        <div>
+            <label>Video ID:</label>
+            <input type="text" name="video_id">
+        </div>
+    </form>
+    <button id="save-video-chooser-btn">Save</button>
+    <button id="close-video-chooser-btn">Cancel</button>
+</div>
+
+
+
+    <div id="project-video">
+
+        <div class="fluid-width-video-wrapper" style="padding-top: 62.5%; "><iframe src="./project_files/1635766.html" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid616843"></iframe></div>
+
+
+        <button id="choose-project-video-btn">Choose video</button>
+
+    </div>
+
+
+
+                <div id="project-tabs">
+    <ul class="nav nav-tabs of-tablist">
+        <li><a href="http://localhost:8000/savetheeverything/#project-tab-details">Details</a></li>
+        <li><a href="http://localhost:8000/savetheeverything/#project-tab-team">Team</a></li>
+        <li><a href="http://localhost:8000/savetheeverything/#project-tab-backers">Backers</a></li>
+
+        <li><a href="http://localhost:8000/savetheeverything/#project-tab-updates">Updates</a></li>
+
+        <li><a href="http://localhost:8000/savetheeverything/#project-tab-discussions">Discussions</a></li>
+
+            <li><a href="http://localhost:8000/savetheeverything/#project-tab-admin">Admin</a></li>
+
+
+            <li><a href="http://localhost:8000/savetheeverything/#project-tab-bbq">BBQ</a></li>
+
+    </ul>
+
+    <div class="tab-content">
+
+        <div id="project-tab-details" class="tab-pane active">
+
+            <div id="project-avatar">
+                <div id="project-avatar-content">
+
+                        <img src="./project_files/LfSRP9QnSz6zmE16zhpO">
+
+                </div>
+
+                    <button id="start-project-avatar-filepicker" class="small">Change Avatar</button>
+
+
+            </div>
+
+            <div>Category: Politics</div>
+            <div>
+                <label for="project-field-pitch">Pitch:</label>
+                <div id="project-field-pitch" class="of-editable text-only project-content">Save all the animals. All of them.</div>
+            </div>
+            <div>
+                <label for="project-field-tech">Tech:</label>
+                <div id="project-field-tech" class="of-editable text-only project-content">Experts and money</div>
+            </div>
+            <div>
+                <label for="project-keywords">Keywords:</label>
+                <span id="project-keywords">animals, endangered, everything</span>
+
+                <button id="edit-keywords-btn" class="btn btn-mini">edit keywords</button>
+                <button id="save-keywords-btn" class="btn btn-mini" style="display: none;">save</button>
+                <button id="cancel-keywords-btn" class="btn btn-mini" style="display: none;">cancel</button>
+
+            </div>
+            <div>Creator: ethan</div>
+
+            <div>
+                <label for="project-field-description">Description:</label>
+                <div id="project-field-description" class="of-editable project-content">Save all the animals in the world...eventually</div>
+            </div>
+        </div>
+
+        <div id="project-tab-team" class="tab-pane">
+            <div>
+                <label for="project-field-team_description">Team Description:</label>
+                <div id="project-field-team_description" class="of-editable project-content">Just me right now.</div>
+            </div>
+            <div>
+                Team:
+                <ul>
+
+                        <li>No team members.</li>
+
+
+
+<div id="project-role-invites">
+
+    <a href="http://localhost:8000/savetheeverything/#role-invite-dlg" role="button" class="btn" data-toggle="modal">Invite to your team</a>
+
+    <table class="table table-condensed">
+        </table><table>
+            <caption>Team Invitations</caption>
+            <thead>
+                <tr>
+                    <th>To</th>
+                    <th>Sent By</th>
+                    <th>Team Role</th>
+                    <th>Custom</th>
+                    <th>Sent</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr id="project-role-invite-2" class="project-role-invite-row row-status-s">
+                    <td><span class="role-invite-to-user">ethan</span></td>
+                    <td><span class="role-invite-from-user">ethan</span></td>
+                    <td><span class="role-invite-role">Custom</span></td>
+                    <td><span class="role-invite-custom">some custom role</span></td>
+                    <td><span class="role-invite-created">Dec. 6, 2012, 3:15 p.m.</span></td>
+                    <td>
+                        <span class="role-invite-message">
+                            Here is an invite to me with a custom role!
+
+                            <a href="./project_files/project.html" rel="tooltip" title="Here is an invite to me with a custom role!">...</a>
+
+                        </span>
+                    </td>
+                    <td>
+                        <span class="role-invite-status" style="display: none;">s</span>
+                        <span class="role-invite-status-display">Sent</span>
+                    </td>
+                    <td class="role-invite-actions">
+                        <button class="btn btn-mini accept-invite-btn">accept</button>
+                        <button class="btn btn-mini decline-invite-btn">decline</button>
+                        <button class="btn btn-mini cancel-invite-btn">cancel</button>
+                    </td>
+                </tr>
+
+                <tr id="project-role-invite-1" class="project-role-invite-row row-status-s">
+                    <td><span class="role-invite-to-user">ethan</span></td>
+                    <td><span class="role-invite-from-user">ethan</span></td>
+                    <td><span class="role-invite-role">Viewer</span></td>
+                    <td><span class="role-invite-custom"></span></td>
+                    <td><span class="role-invite-created">Dec. 6, 2012, 3:15 p.m.</span></td>
+                    <td>
+                        <span class="role-invite-message">
+                            Here is an invite to me!
+
+                        </span>
+                    </td>
+                    <td>
+                        <span class="role-invite-status" style="display: none;">s</span>
+                        <span class="role-invite-status-display">Sent</span>
+                    </td>
+                    <td class="role-invite-actions">
+                        <button class="btn btn-mini accept-invite-btn">accept</button>
+                        <button class="btn btn-mini decline-invite-btn">decline</button>
+                        <button class="btn btn-mini cancel-invite-btn">cancel</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+    <label for="show-all-role-invites">show past invites:</label>
+    <input type="checkbox" id="show-all-role-invites">
+
+    <!-- Invite to team dialog. -->
+    <div id="role-invite-dlg" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="role-invite-dlg-lbl" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 id="role-invite-dlg-lbl">Invite someone to join the team.</h4>
+        </div>
+        <div class="modal-body">
+            <form id="project-role-invite-frm">
+                <div>
+                    <label for="project-role-invite-to-user">To User</label>
+                    <select id="project-role-invite-to-user" name="to_user">
+                        <option value="">- - - - -</option>
+
+                            <option value="1">Ethan Leland</option>
+
+                    </select>
+                </div>
+                <div>
+                    <label for="project-role-invite-role">Team Role</label>
+                    <select id="project-role-invite-role" name="role">
+                        <option value="">- - - - -</option>
+
+                            <option value="o">Owner</option>
+
+                            <option value="v">Viewer</option>
+
+                            <option value="c">Custom</option>
+
+                    </select>
+                </div>
+                <div id="project-role-set-custom" style="display: none;">
+                    <label for="project-role-invite-custom">Custom Role</label>
+                    <input id="project-role-invite-custom" name="custom">
+                </div>
+                <div>
+                    <label for="project-role-invite-message">Message (optional)</label>
+                    <div class="redactor_box"><ul class="redactor_toolbar"><li><a href="javascript:void(null);" title="HTML" class="redactor_btn_html"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Formatting" class="redactor_btn_formatting"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Bold" class="redactor_btn_bold"></a></li><li><a href="javascript:void(null);" title="Italic" class="redactor_btn_italic"></a></li><li><a href="javascript:void(null);" title="Deleted" class="redactor_btn_deleted"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist"></a></li><li><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist"></a></li><li><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent"></a></li><li><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent"></a></li><li><a href="javascript:void(null);" title="Link" class="redactor_btn_link"></a></li><li><a href="javascript:void(null);" title="Font Color" class="redactor_btn_fontcolor"></a></li><li><a href="javascript:void(null);" title="Back Color" class="redactor_btn_backcolor"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Insert Horizontal Rule" class="redactor_btn_horizontalrule"></a></li></ul><div class="redactor_editor-field redactor_editor" contenteditable="true" dir="ltr"><p><br></p></div><textarea id="project-role-invite-message" name="message" class="editor-field" style="display: none; "></textarea></div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button id="save-project-role-invite-btn" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+</div>
+
+
+            </ul></div>
+        </div>
+
+        <div id="project-tab-backers" class="tab-pane">
+            <div>
+                Backers: ethanethanethanethan
+            </div>
+            <div>
+                Followers: No followers.
+            </div>
+        </div>
+
+
+            <div id="project-tab-updates" class="tab-pane">
+                <div>
+                    <a href="http://localhost:8000/savetheeverything/updates">Updates</a>:
+                    <ul>
+
+                            <li>
+                                <a href="http://localhost:8000/project/1234/update/first/">First Project Update</a>
+                                <div class="project-update-content">
+                                    Here is the first project <b><span style="color: #f79646;">update</span></b>!
+                                </div>
+                                <div class="project-update-comment-count">
+                                    1 comments
+                                </div>
+                            </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        <div id="project-tab-discussions" class="tab-pane">
+            <div>
+                <a href="http://localhost:8000/savetheeverything/discussions">Discussions</a>:
+                <ul>
+
+                        <li>
+                            <a href="http://localhost:8000/project/1234/discussion/what-are-you-thinking/">Discussion with owners</a>
+                            (Privacy: Project Owner, last update: Dec. 6, 2012, 3:18 p.m.)
+                        </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+            <div id="project-tab-admin" class="tab-pane">
+
+                <div id="project-field-name" class="of-editable text-only project-content">
+                    Save The Everything
+                </div>
+                <div id="project-field-summary" class="of-editable text-only project-content">
+                    Save all of the animals in the whole world.
+                </div>
+
+                <div>Stage: Project</div>
+                <div>Status: Open Project</div>
+                <div>Public: False</div>
+
+                <div class="current-goal-admin">
+                    <p class="current-goal-status">
+                        Current Goal Status:
+                        <span>Open</span>
+                    </p>
+                    <p class="funding-open">
+                        Funding Open:
+                        <span>True</span>
+                    </p>
+                    <p class="funding-start">
+                        Funding Start:
+                        <span>Dec. 6, 2012, 3:08 p.m.</span>
+                    </p>
+                    <p class="funding-end">
+                        Funding End:
+                        <span>None</span>
+                    </p>
+                    <p class="funding-day-limit">
+                        Funding Day Limit:
+                        <span id="goal-funding-day-limit">30</span>
+                    </p>
+                    <p class="funding-deadline">
+                        Funding Deadline:
+                        <span>Jan. 5, 2013, midnight</span>
+                    </p>
+                    <p class="deliverable-date">
+                        Deliverable Date:
+                        <span id="goal-deliverable-date">April 1, 2013, midnight</span>
+                    </p>
+                    <p class="deliverable-complete">
+                        Deliverable Complete:
+                        <span>False</span>
+                    </p>
+
+                    <p class="met">Met: <span>False</span></p>
+
+                </div>
+
+                <div id="owner-actions">
+    <div>
+        <div class="actionbar-toggle toggle"><span class="ui-icon ui-icon-triangle-1-e"></span>Owner Actions</div>
+        <div class="actionbar-content toggle-content" style="display: none">
+            <ul class="project-action-buttons">
+
+                <li><button id="project-action-cancel-project" class="of-project-action project-action small pop">Cancel Project</button></li>
+
+                <li><button id="project-action-shutdown-project" class="of-project-action project-action small pop">Shutdown Project</button></li>
+
+                <li><button id="project-action-close-current-project-goal" class="of-project-action project-action small pop">Close Current Project Goal</button></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+
+
+
+            <div id="project-tab-bbq" class="tab-pane">
+                <div id="bbq-actions">
+    <div>
+        <div class="actionbar-toggle toggle"><span class="ui-icon ui-icon-triangle-1-e"></span>BBQ Actions</div>
+        <div class="actionbar-content toggle-content" style="display: none">
+            <ul class="project-action-buttons">
+
+                    <li><button id="project-action-bbq-feature-project" class="of-project-action project-bbq-action small pop">Feature Project</button></li>
+
+                    <li><button id="project-action-bbq-shutdown-project" class="of-project-action project-bbq-action small pop">Shutdown Project</button></li>
+
+                    <li><button id="project-action-close-current-project-goal" class="of-project-action project-bbq-action small pop">Close Current Project Goal</button></li>
+
+                    <li><button id="project-action-bbq-suspend-project" class="of-project-action project-bbq-action small pop">Suspend Project</button></li>
+
+                    <li><button id="project-action-bbq-cancel-project" class="of-project-action project-bbq-action small pop">Cancel Project</button></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+
+
+    </div>
+</div>
+
+            </div>
+            <div class="span3">
+                <div id="project-sidebar" class="boxed">
+
+    <div id="sidebar-header">
+        <div class="name-container">
+
+            <span id="project-sidebar-name" class="project-name" style="font-size: 16px; ">Save The Everything</span>
+
+            <span class="project-social">
+                <div class="project-follow">
+                    <button id="project-unfollow-btn" class="btn btn-mini" style="display: none;" title="Stop Following this Project">follower</button>
+                    <button id="project-follow-btn" class="btn btn-mini btn-info" title="Start Following this Project">follow</button>
+                </div>
+                <div class="project-share">
+                    <button id="project-share-btn" class="btn btn-mini">share</button>
+                </div>
+            </span>
+
+        </div>
+        <div id="project-sidebar-summary" class="project-summary">
+            Save all of the animals in the whole world.
+        </div>
+    </div>
+
+
+
+<div id="current-goal">
+
+
+
+        <div id="current-goal-progress-bar" class="progress progress-success">
+            <div id="project-sidebar-progress-bar-text" title="Current Goal Progress" class="bar" style="width: 10%; font-size: 10px; ">
+                <div class="bar-text">
+                    10% of $10,000
+                </div>
+            </div>
+        </div>
+
+        <div id="goal-summary" class="current-goal-summary">Hire an expert consultant</div>
+        <div class="current-goal-more-info">
+            <a id="current-goal-show-more-info-link" href="./project_files/project.html">more info...</a>
+            <a id="current-goal-show-less-info-link" href="./project_files/project.html" style="display: none;">less info...</a>
+            <div id="goal-description" class="current-goal-more-info-inline" style="height: 0px; overflow: hidden;">We'd like to find a wildlife expert who could consult with us about how to best save the rare population of filed mice in Kentucky.&nbsp;</div>
+        </div>
+
+        <div class="current-goal-raised">
+            <div class="raised-amount">
+                $1,020
+            </div>
+            <div class="raised-of-goal">raised towards current goal of</div>
+            <div class="goal-amount">
+                $10,000
+            </div>
+        </div>
+
+
+
+        <div class="current-goal-boxes">
+            <div class="current-goal-backers-box current-goal-box">
+                <div class="current-goal-backers-count box-count">3</div>
+                <div class="current-goal-box-subtext">backers</div>
+            </div>
+            <div class="current-goal-days-left-box current-goal-box">
+                <div class="current-goal-days-left-count box-count">n/a</div>
+                <div class="current-goal-box-subtext">days left</div>
+            </div>
+            <div class="current-goal-followers-box current-goal-box">
+                <div class="current-goal-followers-count box-count">0</div>
+                <div class="current-goal-box-subtext">followers</div>
+            </div>
+        </div>
+
+
+            <div id="open-goal-dlg" style="display: none;" class="modal">
+    <div class="dlg-hd-txt">Open Current Goal?</div>
+    <div>
+        TODO: More info about the goal here:
+        <ul>
+            <li>What is the funding day limit?</li>
+            <li>When exactly would you like to open the goal? (now only, for now)</li>
+            <li>When will it be closed?</li>
+        </ul>
+    </div>
+    <button id="open-goal-now-btn">Open Goal Now</button>
+    <button id="cancel-open-goal-btn">Cancel</button>
+</div>
+
+            <div id="close-goal-dlg" style="display: none;" class="modal">
+    <div>
+        <div class="dlg-hd-txt">Close Current Goal?</div>
+        <div>TODO: Explain more what this will mean exactly.</div>
+    </div>
+    <button id="close-goal-now-btn">Close Goal Now</button>
+    <button id="cancel-close-goal-btn">Cancel</button>
+</div>
+
+
+            <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+            <div class="toggle-admin-content" style="display: none;">
+                <span style="display: none;" id="goal-id">2</span>
+                <span style="display: none;" id="goal-project">1</span>
+                <p class="status">Status: <span>Open</span></p>
+                <p class="funding-open">Funding Open: <span>True</span></p>
+                <p class="funding-start">Funding Start: <span>Dec. 6, 2012, 3:08 p.m.</span></p>
+                <p class="funding-end">Funding End: <span>None</span></p>
+                <p class="actions">
+
+
+                        <button id="close-current-goal">Close Goal</button>
+
+                    <button id="edit-current-goal">Edit Goal</button>
+                </p>
+            </div>
+
+
+
+
+
+        <div id="goal-dlg" style="display: none;" class="modal">
+    <div "dlg-hd-txt"="">Current Goal</div>
+    <form id="goal-dlg-frm">
+    <fieldset>
+        <input type="hidden" id="goal-id-input">
+        <input type="hidden" id="goal-project-input">
+        <p>
+            <label for="goal-summary-input">summary</label>
+            <input id="goal-summary-input" type="text">
+        </p>
+        <p>
+            <label for="goal-description-input">Description</label>
+            <div class="redactor_box"><ul class="redactor_toolbar"><li><a href="javascript:void(null);" title="HTML" class="redactor_btn_html"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Formatting" class="redactor_btn_formatting"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Bold" class="redactor_btn_bold"></a></li><li><a href="javascript:void(null);" title="Italic" class="redactor_btn_italic"></a></li><li><a href="javascript:void(null);" title="Deleted" class="redactor_btn_deleted"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist"></a></li><li><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist"></a></li><li><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent"></a></li><li><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent"></a></li><li><a href="javascript:void(null);" title="Link" class="redactor_btn_link"></a></li><li><a href="javascript:void(null);" title="Font Color" class="redactor_btn_fontcolor"></a></li><li><a href="javascript:void(null);" title="Back Color" class="redactor_btn_backcolor"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Insert Horizontal Rule" class="redactor_btn_horizontalrule"></a></li></ul><div class="redactor_editor-field redactor_editor" contenteditable="true" dir="ltr"><p><br></p></div><textarea id="goal-description-input" class="editor-field" style="display: none; "></textarea></div>
+        </p>
+        <p>
+            <label for="goal-amount-input">Amount</label>
+            <input id="goal-amount-input" type="text">
+        </p>
+        <p>
+            <label for="goal-funding-day-limit-input">Funding day limit</label>
+            <input id="goal-funding-day-limit-input" type="text">
+        </p>
+        <p>
+            <label for="goal-deliverable-date-input">Deliverable date</label>
+            <input id="goal-deliverable-date-input" type="text" class="datepicker">
+        </p>
+    </fieldset>
+    </form>
+    <button id="save-goal-btn">Save</button>
+    <button id="close-goal-btn">Cancel</button>
+</div>
+
+
+</div>
+
+
+
+    <div id="back-project">
+        <button id="back-project-btn" class="btn btn-warning btn-large">Back Project</button>
+    </div>
+    <div id="back-project-dlg" style="display: none;" class="modal of-wizard-modal" data-backdrop="static">
+    <div id="donate-wizard" class="of-wizard">
+        <div class="hd">
+            <span class="title">Donate to Save The Everything!</span>
+            <a class="close-wizard"><i class="icon-remove"></i></a>
+        </div>
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav nav-pills">
+
+    <li class="active"><a href="http://localhost:8000/savetheeverything/#donate-step-1" data-toggle="tab">Donation Tier</a></li>
+    <li><a href="http://localhost:8000/savetheeverything/#donate-step-2" data-toggle="tab">Project Next Steps</a></li>
+    <li><a href="http://localhost:8000/savetheeverything/#donate-step-3" data-toggle="tab">Payment Method</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="alerts">
+            <div class="alert alert-block alert-error" style="display: none;">
+                <button type="button" class="close close-wizard-alert" data-dismiss="alert">×</button>
+                <div class="alert-error-text">&nbsp;</div>
+            </div>
+            <div class="alert alert-block alert-success" style="display: none;">
+                <button type="button" class="close close-wizard-alert" data-dismiss="alert">×</button>
+                <div class="alert-success-text">
+Thank you for your help! <a onclick="document.location.reload();">Refresh the page</a> to see the updated project details...
+</div>
+            </div>
+            <div class="alert alert-block alert-info" style="display: none;">
+                <button type="button" class="close close-wizard-alert" data-dismiss="alert">×</button>
+                <div class="alert-info-text">&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="tab-content">
+
+<div id="donate-step-1" class="tab-pane active">
+    <div class="tab-hd">
+        <h4 class="step-title">Choose Donation Tier</h4>
+    </div>
+    <table class="donate-tiers table table-condensed">
+        <thead>
+            <tr><th>&nbsp;</th>
+            <th>amount</th>
+            <th>info</th>
+            <th># of votes</th>
+        </tr></thead>
+        <tbody>
+
+            <tr class="tier-info">
+                <td>
+                    <input type="radio" name="tier" value="1" class="radio tier-radio">
+                </td>
+                <td class="tier-amount">
+                    <span class="tier-amount">$10</span>
+                    <span class="dollar-amount" style="display: none;">10</span>
+                </td>
+                <td class="tier-subinfo">
+                    <span class="tier-name">Tier the First</span>
+                    <span class="tier-description"><p>You'll be helping us out, so we'll mail you a sticker.</p></span>
+                </td>
+                <td class="tier-votes">
+                    <span class="num-votes">1</span>
+                </td>
+            </tr>
+
+            <tr class="tier-info">
+                <td>
+                    <input type="radio" name="tier" value="2" class="radio tier-radio">
+                </td>
+                <td class="tier-amount">
+                    <span class="tier-amount">$1,000</span>
+                    <span class="dollar-amount" style="display: none;">1000</span>
+                </td>
+                <td class="tier-subinfo">
+                    <span class="tier-name">Tier the second</span>
+                    <span class="tier-description"><p>You're helping us out more, so you'll be getting a sticker AND a poster!</p></span>
+                </td>
+                <td class="tier-votes">
+                    <span class="num-votes">2</span>
+                </td>
+            </tr>
+
+            <tr class="tier-info">
+                <td>
+                    <input type="radio" name="tier" value="3" class="radio tier-radio">
+                </td>
+                <td class="tier-amount">
+                    <span class="tier-amount">$10,000</span>
+                    <span class="dollar-amount" style="display: none;">10000</span>
+                </td>
+                <td class="tier-subinfo">
+                    <span class="tier-name">Tier the third</span>
+                    <span class="tier-description"><p>Wow, you're really helping us out, and subsequently are probably very good looking. You get the sticker, a poster, and to pet an&nbsp;endangered&nbsp;species of your choosing.</p></span>
+                </td>
+                <td class="tier-votes">
+                    <span class="num-votes">5</span>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div id="donate-step-2" class="tab-pane">
+    <div class="tab-hd">
+        <h4 class="step-title">Vote for Project Next Steps (optional)</h4>
+    </div>
+    <table class="donate-next-steps table table-condensed table-striped">
+        <thead>
+            <tr><th colspan="3">
+                <label for="back-project-remaining-votes">
+                    Next Step Votes Granted:
+                    <input type="text" readonly="readonly" disabled="disabled" id="back-project-remaining-votes" value="0">
+                </label>
+            </th>
+        </tr></thead>
+        <tbody>
+
+            <tr class="next-step-li">
+                <td class="ns-votes">(3)</td>
+                <td class="ns-input">
+                    <i class="vote-minus icon-download"></i>
+                    <input type="text" id="next-step-2" value="0" class="back-project-next-step-input" readonly="readonly">
+                    <i class="vote-plus icon-upload"></i>
+                </td>
+                <td class="ns-info">
+                    <span class="ns-summary">Buy out inventory of baby seal clubs</span>
+                    <span class="ns-description"><p>Too many baby seals are being clubbed, possibly due to ability to find baby seal clubs very easily on the open market. Raise money to buy up all the current inventory, making it harder for those damn clubbers.</p></span>
+                </td>
+
+
+            </tr><tr class="next-step-li">
+                <td class="ns-votes">(1)</td>
+                <td class="ns-input">
+                    <i class="vote-minus icon-download"></i>
+                    <input type="text" id="next-step-1" value="0" class="back-project-next-step-input" readonly="readonly">
+                    <i class="vote-plus icon-upload"></i>
+                </td>
+                <td class="ns-info">
+                    <span class="ns-summary">Build a habitat</span>
+                    <span class="ns-description"><p>Buy some land somewhere and use it to build a habitat for the field mice.</p></span>
+                </td>
+
+
+        </tr></tbody>
+    </table>
+    <div>
+        Coming soon: Suggest a new next step! (moderated by project team)
+    </div>
+</div>
+
+<div id="donate-step-3" class="tab-pane">
+    <div class="tab-hd">
+        <h4 class="step-title">Payment Method</h4>
+    </div>
+    <input type="hidden" id="back-project-backer" value="1">
+    <div>
+        <span>$</span>
+        <input type="text" id="back-project-amount-input">
+
+            <span>will be charged if the goal is met before 4 weeks, 1 day from now</span>
+
+    </div>
+    <div class="explain-txt">Choose an existing payment source or enter your credit card info</div>
+    <div id="existing-payment-source">
+        <select id="back-project-money-source-input">
+            <option value="">Choose existing payment account...</option>
+        </select>
+        <div class="test-info text-muted">
+            For now you may use this fake credit card number, found on the
+            <a href="https://www.wepay.com/developer/reference/testing" target="_blank">WePay test site</a>:
+            <a href"#"="" id="populate-fake-cc-data" class="text-info">4003830171874018</a>
+        </div>
+    </div>
+    <div id="use-new-cc">
+        <div class="col left-col">
+            <div>
+                <label for="back-project-cc-name-input">Name on Card:</label>
+                <input type="text" id="back-project-cc-name-input" class="long-text">
+            </div>
+            <div>
+                <label for="back-project-cc-num-input">Card Number:</label>
+                <input type="text" id="back-project-cc-num-input" class="long-number">
+                <span id="back-project-cc-type-display"></span>
+            </div>
+            <div>
+                <label for="back-project-cc-ccv-input">CCV:</label>
+                <input type="text" id="back-project-cc-ccv-input" class="short-number">
+                <label for="back-project-cc-month-input">Month:</label>
+                <input type="text" id="back-project-cc-month-input" class="short-number">
+                <label for="back-project-cc-year-input">Year:</label>
+                <input type="text" id="back-project-cc-year-input" class="short-number">
+            </div>
+            <div>
+                <label for="back-project-cc-email-input">Email:</label>
+                <input type="text" id="back-project-cc-email-input" class="long-text">
+            </div>
+            <div>
+                <label for="back-project-cc-save-input">Save card for reuse?</label>
+                <input type="checkbox" id="back-project-cc-save-input">
+            </div>
+        </div>
+        <div class="col right-col">
+            <div>
+                <label for="back-project-cc-address-1-input">Address 1:</label>
+                <input type="text" id="back-project-cc-address-1-input" class="long-text">
+            </div>
+            <div>
+                <label for="back-project-cc-address-2-input">Address 2:</label>
+                <input type="text" id="back-project-cc-address-2-input" class="long-text">
+            </div>
+            <div>
+                <label for="back-project-cc-city-input">City:</label>
+                <input type="text" id="back-project-cc-city-input" class="long-text">
+            </div>
+            <div>
+                <label for="back-project-cc-state-input">State:</label>
+                <input type="text" id="back-project-cc-state-input" class="short-text">
+                <label for="back-project-cc-zipcode-input">Zipcode:</label>
+                <input type="text" id="back-project-cc-zipcode-input" class="medium-text">
+            </div>
+            <div>
+                <label for="back-project-cc-country-input">Country:</label>
+                <select id="back-project-cc-country-source-input">
+
+                        <option value="US">United States</option>
+
+                        <option value="GB">United Kingdom</option>
+
+                        <option value="AF">Afghanistan</option>
+
+                        <option value="AX">Aland Islands</option>
+
+                        <option value="AL">Albania</option>
+
+                        <option value="DZ">Algeria</option>
+
+                        <option value="AS">American Samoa</option>
+
+                        <option value="AD">Andorra</option>
+
+                        <option value="AO">Angola</option>
+
+                        <option value="AI">Anguilla</option>
+
+                        <option value="AQ">Antarctica</option>
+
+                        <option value="AG">Antigua and Barbuda</option>
+
+                        <option value="AR">Argentina</option>
+
+                        <option value="AM">Armenia</option>
+
+                        <option value="AW">Aruba</option>
+
+                        <option value="AU">Australia</option>
+
+                        <option value="AT">Austria</option>
+
+                        <option value="AZ">Azerbaijan</option>
+
+                        <option value="BS">Bahamas</option>
+
+                        <option value="BH">Bahrain</option>
+
+                        <option value="BD">Bangladesh</option>
+
+                        <option value="BB">Barbados</option>
+
+                        <option value="BY">Belarus</option>
+
+                        <option value="BE">Belgium</option>
+
+                        <option value="BZ">Belize</option>
+
+                        <option value="BJ">Benin</option>
+
+                        <option value="BM">Bermuda</option>
+
+                        <option value="BT">Bhutan</option>
+
+                        <option value="BO">Bolivia</option>
+
+                        <option value="BA">Bosnia and Herzegovina</option>
+
+                        <option value="BW">Botswana</option>
+
+                        <option value="BV">Bouvet Island</option>
+
+                        <option value="BR">Brazil</option>
+
+                        <option value="IO">British Indian Ocean Territory</option>
+
+                        <option value="BN">Brunei Darussalam</option>
+
+                        <option value="BG">Bulgaria</option>
+
+                        <option value="BF">Burkina Faso</option>
+
+                        <option value="BI">Burundi</option>
+
+                        <option value="KH">Cambodia</option>
+
+                        <option value="CM">Cameroon</option>
+
+                        <option value="CA">Canada</option>
+
+                        <option value="CV">Cape Verde</option>
+
+                        <option value="KY">Cayman Islands</option>
+
+                        <option value="CF">Central African Republic</option>
+
+                        <option value="TD">Chad</option>
+
+                        <option value="CL">Chile</option>
+
+                        <option value="CN">China</option>
+
+                        <option value="CX">Christmas Island</option>
+
+                        <option value="CC">Cocos (Keeling) Islands</option>
+
+                        <option value="CO">Colombia</option>
+
+                        <option value="KM">Comoros</option>
+
+                        <option value="CG">Congo</option>
+
+                        <option value="CD">Congo, The Democratic Republic of the</option>
+
+                        <option value="CK">Cook Islands</option>
+
+                        <option value="CR">Costa Rica</option>
+
+                        <option value="CI">Cote d'Ivoire</option>
+
+                        <option value="HR">Croatia</option>
+
+                        <option value="CU">Cuba</option>
+
+                        <option value="CY">Cyprus</option>
+
+                        <option value="CZ">Czech Republic</option>
+
+                        <option value="DK">Denmark</option>
+
+                        <option value="DJ">Djibouti</option>
+
+                        <option value="DM">Dominica</option>
+
+                        <option value="DO">Dominican Republic</option>
+
+                        <option value="EC">Ecuador</option>
+
+                        <option value="EG">Egypt</option>
+
+                        <option value="SV">El Salvador</option>
+
+                        <option value="GQ">Equatorial Guinea</option>
+
+                        <option value="ER">Eritrea</option>
+
+                        <option value="EE">Estonia</option>
+
+                        <option value="ET">Ethiopia</option>
+
+                        <option value="FK">Falkland Islands (Malvinas)</option>
+
+                        <option value="FO">Faroe Islands</option>
+
+                        <option value="FJ">Fiji</option>
+
+                        <option value="FI">Finland</option>
+
+                        <option value="FR">France</option>
+
+                        <option value="GF">French Guiana</option>
+
+                        <option value="PF">French Polynesia</option>
+
+                        <option value="TF">French Southern Territories</option>
+
+                        <option value="GA">Gabon</option>
+
+                        <option value="GM">Gambia</option>
+
+                        <option value="GE">Georgia</option>
+
+                        <option value="DE">Germany</option>
+
+                        <option value="GH">Ghana</option>
+
+                        <option value="GI">Gibraltar</option>
+
+                        <option value="GR">Greece</option>
+
+                        <option value="GL">Greenland</option>
+
+                        <option value="GD">Grenada</option>
+
+                        <option value="GP">Guadeloupe</option>
+
+                        <option value="GU">Guam</option>
+
+                        <option value="GT">Guatemala</option>
+
+                        <option value="GG">Guernsey</option>
+
+                        <option value="GN">Guinea</option>
+
+                        <option value="GW">Guinea-Bissau</option>
+
+                        <option value="GY">Guyana</option>
+
+                        <option value="HT">Haiti</option>
+
+                        <option value="HM">Heard Island and McDonald Islands</option>
+
+                        <option value="VA">Holy See (Vatican City State)</option>
+
+                        <option value="HN">Honduras</option>
+
+                        <option value="HK">Hong Kong</option>
+
+                        <option value="HU">Hungary</option>
+
+                        <option value="IS">Iceland</option>
+
+                        <option value="IN">India</option>
+
+                        <option value="ID">Indonesia</option>
+
+                        <option value="IR">Iran, Islamic Republic of</option>
+
+                        <option value="IQ">Iraq</option>
+
+                        <option value="IE">Ireland</option>
+
+                        <option value="IM">Isle of Man</option>
+
+                        <option value="IL">Israel</option>
+
+                        <option value="IT">Italy</option>
+
+                        <option value="JM">Jamaica</option>
+
+                        <option value="JP">Japan</option>
+
+                        <option value="JE">Jersey</option>
+
+                        <option value="JO">Jordan</option>
+
+                        <option value="KZ">Kazakhstan</option>
+
+                        <option value="KE">Kenya</option>
+
+                        <option value="KI">Kiribati</option>
+
+                        <option value="KP">Korea, Democratic People's Republic of</option>
+
+                        <option value="KR">Korea, Republic of</option>
+
+                        <option value="KW">Kuwait</option>
+
+                        <option value="KG">Kyrgyzstan</option>
+
+                        <option value="LA">Lao People's Democratic Republic</option>
+
+                        <option value="LV">Latvia</option>
+
+                        <option value="LB">Lebanon</option>
+
+                        <option value="LS">Lesotho</option>
+
+                        <option value="LR">Liberia</option>
+
+                        <option value="LY">Libyan Arab Jamahiriya</option>
+
+                        <option value="LI">Liechtenstein</option>
+
+                        <option value="LT">Lithuania</option>
+
+                        <option value="LU">Luxembourg</option>
+
+                        <option value="MO">Macao</option>
+
+                        <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+
+                        <option value="MG">Madagascar</option>
+
+                        <option value="MW">Malawi</option>
+
+                        <option value="MY">Malaysia</option>
+
+                        <option value="MV">Maldives</option>
+
+                        <option value="ML">Mali</option>
+
+                        <option value="MT">Malta</option>
+
+                        <option value="MH">Marshall Islands</option>
+
+                        <option value="MQ">Martinique</option>
+
+                        <option value="MR">Mauritania</option>
+
+                        <option value="MU">Mauritius</option>
+
+                        <option value="YT">Mayotte</option>
+
+                        <option value="MX">Mexico</option>
+
+                        <option value="FM">Micronesia, Federated States of</option>
+
+                        <option value="MD">Moldova</option>
+
+                        <option value="MC">Monaco</option>
+
+                        <option value="MN">Mongolia</option>
+
+                        <option value="ME">Montenegro</option>
+
+                        <option value="MS">Montserrat</option>
+
+                        <option value="MA">Morocco</option>
+
+                        <option value="MZ">Mozambique</option>
+
+                        <option value="MM">Myanmar</option>
+
+                        <option value="NA">Namibia</option>
+
+                        <option value="NR">Nauru</option>
+
+                        <option value="NP">Nepal</option>
+
+                        <option value="NL">Netherlands</option>
+
+                        <option value="AN">Netherlands Antilles</option>
+
+                        <option value="NC">New Caledonia</option>
+
+                        <option value="NZ">New Zealand</option>
+
+                        <option value="NI">Nicaragua</option>
+
+                        <option value="NE">Niger</option>
+
+                        <option value="NG">Nigeria</option>
+
+                        <option value="NU">Niue</option>
+
+                        <option value="NF">Norfolk Island</option>
+
+                        <option value="MP">Northern Mariana Islands</option>
+
+                        <option value="NO">Norway</option>
+
+                        <option value="OM">Oman</option>
+
+                        <option value="PK">Pakistan</option>
+
+                        <option value="PW">Palau</option>
+
+                        <option value="PS">Palestinian Territory, Occupied</option>
+
+                        <option value="PA">Panama</option>
+
+                        <option value="PG">Papua New Guinea</option>
+
+                        <option value="PY">Paraguay</option>
+
+                        <option value="PE">Peru</option>
+
+                        <option value="PH">Philippines</option>
+
+                        <option value="PN">Pitcairn</option>
+
+                        <option value="PL">Poland</option>
+
+                        <option value="PT">Portugal</option>
+
+                        <option value="PR">Puerto Rico</option>
+
+                        <option value="QA">Qatar</option>
+
+                        <option value="RE">Reunion</option>
+
+                        <option value="RO">Romania</option>
+
+                        <option value="RU">Russian Federation</option>
+
+                        <option value="RW">Rwanda</option>
+
+                        <option value="BL">Saint Barthelemy</option>
+
+                        <option value="SH">Saint Helena</option>
+
+                        <option value="KN">Saint Kitts and Nevis</option>
+
+                        <option value="LC">Saint Lucia</option>
+
+                        <option value="MF">Saint Martin</option>
+
+                        <option value="PM">Saint Pierre and Miquelon</option>
+
+                        <option value="VC">Saint Vincent and the Grenadines</option>
+
+                        <option value="WS">Samoa</option>
+
+                        <option value="SM">San Marino</option>
+
+                        <option value="ST">Sao Tome and Principe</option>
+
+                        <option value="SA">Saudi Arabia</option>
+
+                        <option value="SN">Senegal</option>
+
+                        <option value="RS">Serbia</option>
+
+                        <option value="SC">Seychelles</option>
+
+                        <option value="SL">Sierra Leone</option>
+
+                        <option value="SG">Singapore</option>
+
+                        <option value="SK">Slovakia</option>
+
+                        <option value="SI">Slovenia</option>
+
+                        <option value="SB">Solomon Islands</option>
+
+                        <option value="SO">Somalia</option>
+
+                        <option value="ZA">South Africa</option>
+
+                        <option value="GS">South Georgia and the South Sandwich Islands</option>
+
+                        <option value="ES">Spain</option>
+
+                        <option value="LK">Sri Lanka</option>
+
+                        <option value="SD">Sudan</option>
+
+                        <option value="SR">Suriname</option>
+
+                        <option value="SJ">Svalbard and Jan Mayen</option>
+
+                        <option value="SZ">Swaziland</option>
+
+                        <option value="SE">Sweden</option>
+
+                        <option value="CH">Switzerland</option>
+
+                        <option value="SY">Syrian Arab Republic</option>
+
+                        <option value="TW">Taiwan, Province of China</option>
+
+                        <option value="TJ">Tajikistan</option>
+
+                        <option value="TZ">Tanzania, United Republic of</option>
+
+                        <option value="TH">Thailand</option>
+
+                        <option value="TL">Timor-Leste</option>
+
+                        <option value="TG">Togo</option>
+
+                        <option value="TK">Tokelau</option>
+
+                        <option value="TO">Tonga</option>
+
+                        <option value="TT">Trinidad and Tobago</option>
+
+                        <option value="TN">Tunisia</option>
+
+                        <option value="TR">Turkey</option>
+
+                        <option value="TM">Turkmenistan</option>
+
+                        <option value="TC">Turks and Caicos Islands</option>
+
+                        <option value="TV">Tuvalu</option>
+
+                        <option value="UG">Uganda</option>
+
+                        <option value="UA">Ukraine</option>
+
+                        <option value="AE">United Arab Emirates</option>
+
+                        <option value="GB">United Kingdom</option>
+
+                        <option value="US">United States</option>
+
+                        <option value="UM">United States Minor Outlying Islands</option>
+
+                        <option value="UY">Uruguay</option>
+
+                        <option value="UZ">Uzbekistan</option>
+
+                        <option value="VU">Vanuatu</option>
+
+                        <option value="VE">Venezuela</option>
+
+                        <option value="VN">Viet Nam</option>
+
+                        <option value="VG">Virgin Islands, British</option>
+
+                        <option value="VI">Virgin Islands, U.S.</option>
+
+                        <option value="WF">Wallis and Futuna</option>
+
+                        <option value="EH">Western Sahara</option>
+
+                        <option value="YE">Yemen</option>
+
+                        <option value="ZM">Zambia</option>
+
+                        <option value="ZW">Zimbabwe</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="wepay-credit">Credit Card Will be Processed by <a href="http://www.wepay.com/">WePay</a></div>
+    </div>
+</div>
+
+        </div>
+        <ul class="pager wizard">
+
+    <li class="previous disabled"><a href="./project_files/project.html">Back</a></li>
+    <li class="next finish nav-btn-finish" style="display: none; "><a href="./project_files/project.html">Submit Payment</a></li>
+    <li class="next nav-btn-next" style=""><a href="./project_files/project.html">Next</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="tier-dlg" style="display: none;" class="modal">
+    <div "dlg-hd-txt"="">Tier</div>
+    <form id="tier-dlg-frm">
+    <fieldset>
+        <input type="hidden" id="tier-id-input">
+        <input type="hidden" id="tier-goal-input">
+        <p>
+            <label for="tier-name-input">Name</label>
+            <input id="tier-name-input" type="text">
+        </p>
+        <p>
+            <label for="tier-amount-input">Amount</label>
+            <input id="tier-amount-input" type="text">
+        </p>
+        <p>
+            <label for="tier-description-input">Description</label>
+            <div class="redactor_box"><ul class="redactor_toolbar"><li><a href="javascript:void(null);" title="HTML" class="redactor_btn_html"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Formatting" class="redactor_btn_formatting"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Bold" class="redactor_btn_bold"></a></li><li><a href="javascript:void(null);" title="Italic" class="redactor_btn_italic"></a></li><li><a href="javascript:void(null);" title="Deleted" class="redactor_btn_deleted"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist"></a></li><li><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist"></a></li><li><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent"></a></li><li><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent"></a></li><li><a href="javascript:void(null);" title="Link" class="redactor_btn_link"></a></li><li><a href="javascript:void(null);" title="Font Color" class="redactor_btn_fontcolor"></a></li><li><a href="javascript:void(null);" title="Back Color" class="redactor_btn_backcolor"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Insert Horizontal Rule" class="redactor_btn_horizontalrule"></a></li></ul><div class="redactor_editor-field redactor_editor" contenteditable="true" dir="ltr"><p><br></p></div><textarea id="tier-description-input" class="editor-field" style="display: none; "></textarea></div>
+        </p>
+        <p>
+            <label for="tier-backer-limit-input">Backer limit</label>
+            <input id="tier-backer-limit-input" type="text">
+        </p>
+        <p>
+            <label for="tier-next-step-votes-input">Number of next step votes</label>
+            <input id="tier-next-step-votes-input" type="text">
+        </p>
+    </fieldset>
+    </form>
+    <button id="save-tier-btn">Save</button>
+    <button id="close-tier-btn">Cancel</button>
+</div>
+
+<div id="delete-tier-dlg" style="display: none;" class="modal">
+    <div "dlg-hd-txt"="">Delete Tier</div>
+    <input type="hidden" class="tier-id-input">
+    <div>
+        <button id="delete-tier-delete-btn">Delete Tier</button>
+        <button id="close-delete-tier-btn">Cancel</button>
+    </div>
+</div>
+
+<div id="tiers">
+    <h6>Donation Tiers</h6>
+
+        <button id="add-tier" class="btn btn-mini btn-info">Add Tier</button>
+
+    <div class="accordion" id="tier-accordion">
+
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-1">
+                    <span class="tier-name">Tier the First</span>
+                    <span class="tier-limits">($10, 2/1000 backers)</span>
+
+                </a>
+            </div>
+
+            <div id="tier-1" class="tier accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    <div>
+                        <div><span class="tier-description"><p>You'll be helping us out, so we'll mail you a sticker.</p></span></div>
+                        <div class="next-step-votes">Next Step Votes: <span class="tier-next-step-votes">1</span></div>
+                    </div>
+
+
+                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+                        <div class="toggle-admin-content" style="display: none;">
+                            <span style="display: none;">
+                                <span class="tier-id">1</span>
+                                <span class="tier-name">Tier the First</span>
+                                <span class="tier-goal">2</span>
+                                <span class="tier-amount">10</span>
+                                <span class="tier-backer-limit">1000</span>
+                            </span>
+                            <button id="edit-tier-1" class="edit-tier small">Edit Tier</button>
+                            <button id="delete-tier-1" class="delete-tier small">Delete Tier</button>
+                        </div>
+
+
+                </div>
+            </div>
+
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-2">
+                    <span class="tier-name">Tier the second</span>
+                    <span class="tier-limits">($1000, 0/1000 backers)</span>
+
+                </a>
+            </div>
+
+            <div id="tier-2" class="tier accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    <div>
+                        <div><span class="tier-description"><p>You're helping us out more, so you'll be getting a sticker AND a poster!</p></span></div>
+                        <div class="next-step-votes">Next Step Votes: <span class="tier-next-step-votes">2</span></div>
+                    </div>
+
+
+                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+                        <div class="toggle-admin-content" style="display: none;">
+                            <span style="display: none;">
+                                <span class="tier-id">2</span>
+                                <span class="tier-name">Tier the second</span>
+                                <span class="tier-goal">2</span>
+                                <span class="tier-amount">1000</span>
+                                <span class="tier-backer-limit">1000</span>
+                            </span>
+                            <button id="edit-tier-2" class="edit-tier small">Edit Tier</button>
+                            <button id="delete-tier-2" class="delete-tier small">Delete Tier</button>
+                        </div>
+
+
+                </div>
+            </div>
+
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-3">
+                    <span class="tier-name">Tier the third</span>
+                    <span class="tier-limits">($10000, 1/10 backers)</span>
+
+                </a>
+            </div>
+
+            <div id="tier-3" class="tier accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    <div>
+                        <div><span class="tier-description"><p>Wow, you're really helping us out, and subsequently are probably very good looking. You get the sticker, a poster, and to pet an&nbsp;endangered&nbsp;species of your choosing.</p></span></div>
+                        <div class="next-step-votes">Next Step Votes: <span class="tier-next-step-votes">5</span></div>
+                    </div>
+
+
+                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+                        <div class="toggle-admin-content" style="display: none;">
+                            <span style="display: none;">
+                                <span class="tier-id">3</span>
+                                <span class="tier-name">Tier the third</span>
+                                <span class="tier-goal">2</span>
+                                <span class="tier-amount">10000</span>
+                                <span class="tier-backer-limit">10</span>
+                            </span>
+                            <button id="edit-tier-3" class="edit-tier small">Edit Tier</button>
+                            <button id="delete-tier-3" class="delete-tier small">Delete Tier</button>
+                        </div>
+
+
+                </div>
+            </div>
+
+    </div>
+    <span style="display: none;" id="tier-goal">2</span>
+</div>
+
+
+<div id="next-step-dlg" style="display: none;" class="modal">
+    <div "dlg-hd-txt"="">Next Step</div>
+    <form id="next-step-dlg-frm">
+    <fieldset>
+        <input type="hidden" id="next-step-id-input">
+        <input type="hidden" id="next-step-goal-input">
+        <p>
+            <label for="next-step-summary-input">Summary</label>
+            <input id="next-step-summary-input" type="text">
+        </p>
+        <p>
+            <label for="next-step-description-input">Description</label>
+            <div class="redactor_box"><ul class="redactor_toolbar"><li><a href="javascript:void(null);" title="HTML" class="redactor_btn_html"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Formatting" class="redactor_btn_formatting"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Bold" class="redactor_btn_bold"></a></li><li><a href="javascript:void(null);" title="Italic" class="redactor_btn_italic"></a></li><li><a href="javascript:void(null);" title="Deleted" class="redactor_btn_deleted"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist"></a></li><li><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist"></a></li><li><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent"></a></li><li><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent"></a></li><li><a href="javascript:void(null);" title="Link" class="redactor_btn_link"></a></li><li><a href="javascript:void(null);" title="Font Color" class="redactor_btn_fontcolor"></a></li><li><a href="javascript:void(null);" title="Back Color" class="redactor_btn_backcolor"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Insert Horizontal Rule" class="redactor_btn_horizontalrule"></a></li></ul><div class="redactor_editor-field redactor_editor" contenteditable="true" dir="ltr"><p><br></p></div><textarea id="next-step-description-input" class="editor-field" style="display: none; "></textarea></div>
+        </p>
+    </fieldset>
+    </form>
+    <button id="save-next-step-btn">Save</button>
+    <button id="close-next-step-btn">Cancel</button>
+</div>
+
+<div id="delete-next-step-dlg" style="display: none;" class="modal">
+    <div "dlg-hd-txt"="">Delete Next Step</div>
+    <input type="hidden" class="next-step-id-input">
+    <div>
+        <button id="delete-next-step-delete-btn">Delete Next Step</button>
+        <button id="close-delete-next-step-btn">Cancel</button>
+    </div>
+</div>
+
+<div id="next-steps">
+    <h6>Next Steps</h6>
+
+        <button id="add-next-step" class="btn btn-mini btn-info">Add a Next Step</button>
+
+    <div class="accordion" id="next-step-accordion">
+
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#next-step-accordion" href="http://localhost:8000/savetheeverything/#next-step-toggle-2">
+                    <span class="next-step-summary">Buy out inventory of baby seal clubs</span>
+                    <span class="next-step-num-votes">(3 votes)</span>
+                </a>
+            </div>
+
+            <div id="next-step-toggle-2" class="next-step accordion-body collapse in">
+                <div class="accordion-inner">
+                    <div>
+                        <span class="next-step-description"><p>Too many baby seals are being clubbed, possibly due to ability to find baby seal clubs very easily on the open market. Raise money to buy up all the current inventory, making it harder for those damn clubbers.</p></span>
+                    </div>
+
+
+                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+                        <div class="toggle-admin-content" style="display: none;">
+                            <span style="display: none;">
+                                <span class="next-step-id">2</span>
+                                <span class="next-step-goal">2</span>
+                                <span class="next-step-summary">Buy out inventory of baby seal clubs</span>
+                            </span>
+                            <button id="edit-next-step-2" class="edit-next-step small">Edit Next Step</button>
+                            <button id="delete-next-step-2" class="delete-next-step small">Delete Next Step</button>
+                        </div>
+
+                </div>
+            </div>
+
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#next-step-accordion" href="http://localhost:8000/savetheeverything/#next-step-toggle-1">
+                    <span class="next-step-summary">Build a habitat</span>
+                    <span class="next-step-num-votes">(1 votes)</span>
+                </a>
+            </div>
+
+            <div id="next-step-toggle-1" class="next-step accordion-body collapse in">
+                <div class="accordion-inner">
+                    <div>
+                        <span class="next-step-description"><p>Buy some land somewhere and use it to build a habitat for the field mice.</p></span>
+                    </div>
+
+
+                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+                        <div class="toggle-admin-content" style="display: none;">
+                            <span style="display: none;">
+                                <span class="next-step-id">1</span>
+                                <span class="next-step-goal">2</span>
+                                <span class="next-step-summary">Build a habitat</span>
+                            </span>
+                            <button id="edit-next-step-1" class="edit-next-step small">Edit Next Step</button>
+                            <button id="delete-next-step-1" class="delete-next-step small">Delete Next Step</button>
+                        </div>
+
+                </div>
+            </div>
+
+    </div>
+    <span style="display: none;" id="next-step-goal">2</span>
+</div>
+
+
+
+
+<div id="completed-goals">
+    <h6>Past Goals</h6>
+    <div class="accordion" id="completed-goals-accordion">
+
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#completed-goals-accordion" href="http://localhost:8000/savetheeverything/#completed-goal-1">
+                    $10,000: Succeeded (123%)
+                </a>
+            </div>
+            <div id="completed-goal-1" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    Create a website and use it to organize.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <div id="future-goal-container">
+    <div id="future-goal-dlg" style="display: none;" class="modal">
+    <div "dlg-hd-txt"="">Future Goal</div>
+    <form id="future-goal-dlg-frm">
+    <fieldset>
+        <p>
+            <label for="future-goal-summary-input">Summary</label>
+            <input id="future-goal-summary-input" type="text">
+        </p>
+        <p>
+            <label for="future-goal-description-input">Description</label>
+            <div class="redactor_box"><ul class="redactor_toolbar"><li><a href="javascript:void(null);" title="HTML" class="redactor_btn_html"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Formatting" class="redactor_btn_formatting"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Bold" class="redactor_btn_bold"></a></li><li><a href="javascript:void(null);" title="Italic" class="redactor_btn_italic"></a></li><li><a href="javascript:void(null);" title="Deleted" class="redactor_btn_deleted"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist"></a></li><li><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist"></a></li><li><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent"></a></li><li><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent"></a></li><li><a href="javascript:void(null);" title="Link" class="redactor_btn_link"></a></li><li><a href="javascript:void(null);" title="Font Color" class="redactor_btn_fontcolor"></a></li><li><a href="javascript:void(null);" title="Back Color" class="redactor_btn_backcolor"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Insert Horizontal Rule" class="redactor_btn_horizontalrule"></a></li></ul><div class="redactor_editor-field redactor_editor" contenteditable="true" dir="ltr"><p><br></p></div><textarea id="future-goal-description-input" class="editor-field" style="display: none; "></textarea></div>
+            <input type="hidden" id="future-goal-id-input">
+        </p>
+    </fieldset>
+    </form>
+    <button id="save-future-goal-btn">Save</button>
+    <button id="close-future-goal-btn">Cancel</button>
+</div>
+
+    <h6>Future Goal</h6>
+
+        <div class="accordion" id="future-goal-accordion">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#future-goal-accordion" href="http://localhost:8000/savetheeverything/#future-goal">
+                    Save all the animals. All of them.
+                </a>
+            </div>
+            <div id="future-goal" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    <span id="future-goal-description" class="description">Save every endangered species that we can find, and maybe even help find new ones.</span>
+                    <div>Met: Not yet</div>
+
+
+                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+                        <div class="toggle-admin-content" style="display: none;">
+                            <span style="display: none;" id="future-goal-id">1</span>
+                            <span id="future-goal-summary" style="display: none;">Save all the animals. All of them.</span>
+                            <button id="edit-future-goal" class="small">Edit Future Goal</button>
+                        </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+</div>
+
+
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer-container" class="wrapper" role="banner">
+
+                <div id="footer-slider">
+    <div id="footer-top">
+        <div id="footer-left">
+            <a id="show-feedback-btn" class="btn btn-info btn-mini"><i class="icon-pencil icon-white"></i> Feedback</a>
+            <a id="hide-feedback-btn" class="btn btn-info btn-mini" style="display: none;"><i class="icon-pencil icon-white"></i> Hide Feedback</a>
+        </div>
+        <div id="footer-right">
+            <a href="http://localhost:8000/about/">about</a>&nbsp;
+            <a href="http://localhost:8000/about/#terms">terms</a>&nbsp;
+            <a href="http://localhost:8000/about/#privacy">privacy</a>&nbsp;
+            openfire beta
+        </div>
+    </div>
+    <div id="footer-bottom">
+        <hr>
+        <div class="feedback">
+            <div class="hd">Feedback for openfire:</div>
+            <div>
+                <form id="feedback-frm">
+                    <textarea id="feedback-content"></textarea>
+                </form>
+                <div class="feedback-submit">
+                    <button id="submit-feedback-btn" class="btn">Submit</button>
+                    <span id="feedback-saved" class="alert alert-success" style="display: none;">Saved! Thanks!</span>
+                    <span id="feedback-error" class="alert alert-error" style="display: none;"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </footer>
+
+        <script src="./../../third_party/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/_static/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="./../../third_party/csrf_protect.js"></script>
+
+        <!-- Underscore and Backbone -->
+        <script type="text/javascript" src="./../../third_party/underscore-min.js"></script>
+        <script type="text/javascript" src="./../../third_party/backbone-min.js"></script>
+
+        <!-- Bootstrap -->
+        <script type="text/javascript" src="./../../third_party/bootstrap.min.js"></script>
+
+        <!-- jQuery Validate Plugin -->
+        <script type="text/javascript" src="./../../third_party/jquery.validate.js"></script>
+        <script type="text/javascript" src="./../../third_party/additional-methods.js"></script>
+
+        <!-- jQuery fit text and video plugins -->
+        <script type="text/javascript" src="./../../third_party/jquery.fittext.js"></script>
+        <script type="text/javascript" src="./../../third_party/jquery.fitvids.js"></script>
+
+        <!-- Date picker -->
+        <script type="text/javascript" src="./../../third_party/bootstrap-datepicker.js"></script>
+
+        <!-- Redactor editor -->
+        <link rel="stylesheet" type="text/css" href="./../../third_party/redactor.css">
+        <script type="text/javascript" src="./../../third_party/redactor.min.js"></script>
+
+        <!-- jQuery/Bootstrap Wizard -->
+        <script type="text/javascript" src="./../../third_party/jquery.bootstrap.wizard.js"></script>
+
+        <!-- Bootstrap confirm/alert boxes -->
+        <script type="text/javascript" src="./../../third_party/bootbox.js"></script>
+
+        <!-- openfire base js -->
+        <script type="text/javascript" src="./project_files/openfire.c23348e71ed3.js"></script>
+<script type="text/javascript" src="./project_files/content.853fcd141eed.js"></script>
+<script type="text/javascript" src="./project_files/header.c477200c30e0.js"></script>
+<script type="text/javascript" src="./project_files/feedback.c3f2cde0d133.js"></script>
+<script type="text/javascript" src="./project_files/of_bootstrap.586cf4c39395.js"></script>
+        <div id="content-editor-dlg" style="display: none;" class="modal of-dialog" data-backdrop="static">
+    <div class="hd">
+        <span class="title">Edit content</span>
+        <a class="close-dialog"><i class="icon-remove"></i></a>
+    </div>
+
+    <div class="alerts">
+        <div class="alert alert-block alert-error" style="display: none;">
+            <button type="button" class="close close-dialog-alert" data-dismiss="alert">×</button>
+            <div class="alert-error-text">&nbsp;</div>
+        </div>
+        <div class="alert alert-block alert-success" style="display: none;">
+            <button type="button" class="close close-dialog-alert" data-dismiss="alert">×</button>
+            <div class="alert-success-text">&nbsp;</div>
+        </div>
+        <div class="alert alert-block alert-info" style="display: none;">
+            <button type="button" class="close close-dialog-alert" data-dismiss="alert">×</button>
+            <div class="alert-info-text">&nbsp;</div>
+        </div>
+    </div>
+
+    <div class="dialog-content">
+
+    <textarea id="content-editor-textarea"></textarea>
+
+    </div>
+
+    <div class="dialog-buttons">
+
+    <button id="content-editor-save-btn" class="btn btn-mini btn-info dialog-btn">Save</button>
+    <button id="content-editor-cancel-btn" class="btn btn-mini dialog-btn dialog-btn-close">Close</button>
+
+    </div>
+</div>
+
+
+<div id="edit-action-tmpl" style="display: none;"><button class="edit-action small" type="button">edit</button></div>
+
+
+
+        <!-- Google Analytics. -->
+        <script>
+            var _gaq=[['_setAccount','UA-36648747-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+        <!-- Filepicker.io -->
+        <script src="./../../third_party/filepicker.js"></script>
+        <script type="text/javascript">
+            //Seting up Filepicker.io with your api key
+            filepicker.setKey('AOoNy9PMDQoa4yUZMzg8sz');
+        </script>
+
+        <input type="hidden" id="csrf-token" value="Pic49rw2futVfnnbcysbXff6tTCks4ir">
+
+        <script type="text/javascript">
+            $.openfire.page_vars.logged_in = true;
+        </script>
+
+
+    <script type="text/javascript">
+        $.openfire.page_vars.project_id = "1";
+        $.openfire.page_vars.can_edit = true;
+
+            $.openfire.page_vars.user_id = 1;
+
+    </script>
+    <script type="text/javascript" src="./project_files/project.1ffbad415821.js"></script>
+<script type="text/javascript" src="./project_files/back_project.a2a795d2f4ac.js"></script>
+<script type="text/javascript" src="./project_files/project_roles.b01db7d8a33d.js"></script>
+
+
+
+
+<div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Paragraph</a><a href="javascript:void(null);" class="redactor_format_blockquote">Quote</a><a href="javascript:void(null);" class="redactor_format_pre">Code</a><a href="javascript:void(null);" class="redactor_format_h1">Header 1</a><a href="javascript:void(null);" class="redactor_format_h2">Header 2</a><a href="javascript:void(null);" class="redactor_format_h3">Header 3</a><a href="javascript:void(null);" class="redactor_format_h4">Header 4</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Insert link</a><a href="javascript:void(null);" class="">Unlink</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Align text to the left</a><a href="javascript:void(null);" class="">Center text</a><a href="javascript:void(null);" class="">Align text to the right</a><a href="javascript:void(null);" class="">Justify text</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Paragraph</a><a href="javascript:void(null);" class="redactor_format_blockquote">Quote</a><a href="javascript:void(null);" class="redactor_format_pre">Code</a><a href="javascript:void(null);" class="redactor_format_h1">Header 1</a><a href="javascript:void(null);" class="redactor_format_h2">Header 2</a><a href="javascript:void(null);" class="redactor_format_h3">Header 3</a><a href="javascript:void(null);" class="redactor_format_h4">Header 4</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Insert link</a><a href="javascript:void(null);" class="">Unlink</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Align text to the left</a><a href="javascript:void(null);" class="">Center text</a><a href="javascript:void(null);" class="">Align text to the right</a><a href="javascript:void(null);" class="">Justify text</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Paragraph</a><a href="javascript:void(null);" class="redactor_format_blockquote">Quote</a><a href="javascript:void(null);" class="redactor_format_pre">Code</a><a href="javascript:void(null);" class="redactor_format_h1">Header 1</a><a href="javascript:void(null);" class="redactor_format_h2">Header 2</a><a href="javascript:void(null);" class="redactor_format_h3">Header 3</a><a href="javascript:void(null);" class="redactor_format_h4">Header 4</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Insert link</a><a href="javascript:void(null);" class="">Unlink</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Align text to the left</a><a href="javascript:void(null);" class="">Center text</a><a href="javascript:void(null);" class="">Align text to the right</a><a href="javascript:void(null);" class="">Justify text</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Paragraph</a><a href="javascript:void(null);" class="redactor_format_blockquote">Quote</a><a href="javascript:void(null);" class="redactor_format_pre">Code</a><a href="javascript:void(null);" class="redactor_format_h1">Header 1</a><a href="javascript:void(null);" class="redactor_format_h2">Header 2</a><a href="javascript:void(null);" class="redactor_format_h3">Header 3</a><a href="javascript:void(null);" class="redactor_format_h4">Header 4</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Insert link</a><a href="javascript:void(null);" class="">Unlink</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Align text to the left</a><a href="javascript:void(null);" class="">Center text</a><a href="javascript:void(null);" class="">Align text to the right</a><a href="javascript:void(null);" class="">Justify text</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Paragraph</a><a href="javascript:void(null);" class="redactor_format_blockquote">Quote</a><a href="javascript:void(null);" class="redactor_format_pre">Code</a><a href="javascript:void(null);" class="redactor_format_h1">Header 1</a><a href="javascript:void(null);" class="redactor_format_h2">Header 2</a><a href="javascript:void(null);" class="redactor_format_h3">Header 3</a><a href="javascript:void(null);" class="redactor_format_h4">Header 4</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Insert link</a><a href="javascript:void(null);" class="">Unlink</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none; width: 210px; "><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 255); "></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(0, 0, 0); "></a><a rel="#eeece1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(238, 236, 225); "></a><a rel="#1f497d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(31, 73, 125); "></a><a rel="#4f81bd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 129, 189); "></a><a rel="#c0504d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 80, 77); "></a><a rel="#9bbb59" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(155, 187, 89); "></a><a rel="#8064a2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(128, 100, 162); "></a><a rel="#4bacc6" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(75, 172, 198); "></a><a rel="#f79646" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(247, 150, 70); "></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 255, 0); "></a><a rel="#f2f2f2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 242, 242); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#ddd9c3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(221, 217, 195); "></a><a rel="#c6d9f0" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(198, 217, 240); "></a><a rel="#dbe5f1" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 229, 241); "></a><a rel="#f2dcdb" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 220, 219); "></a><a rel="#ebf1dd" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(235, 241, 221); "></a><a rel="#e5e0ec" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 224, 236); "></a><a rel="#dbeef3" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(219, 238, 243); "></a><a rel="#fdeada" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(253, 234, 218); "></a><a rel="#fff2ca" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 242, 202); "></a><a rel="#d8d8d8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(216, 216, 216); "></a><a rel="#595959" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(89, 89, 89); "></a><a rel="#c4bd97" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(196, 189, 151); "></a><a rel="#8db3e2" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(141, 179, 226); "></a><a rel="#b8cce4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(184, 204, 228); "></a><a rel="#e5b9b7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(229, 185, 183); "></a><a rel="#d7e3bc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(215, 227, 188); "></a><a rel="#ccc1d9" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(204, 193, 217); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fbd5b5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(251, 213, 181); "></a><a rel="#ffe694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(255, 230, 148); "></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(191, 191, 191); "></a><a rel="#3f3f3f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 63, 63); "></a><a rel="#938953" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(147, 137, 83); "></a><a rel="#548dd4" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(84, 141, 212); "></a><a rel="#95b3d7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 179, 215); "></a><a rel="#d99694" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(217, 150, 148); "></a><a rel="#c3d69b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(195, 214, 155); "></a><a rel="#b2a2c7" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(178, 162, 199); "></a><a rel="#b7dde8" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(183, 221, 232); "></a><a rel="#fac08f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(250, 192, 143); "></a><a rel="#f2c314" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(242, 195, 20); "></a><a rel="#a5a5a5" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(165, 165, 165); "></a><a rel="#262626" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(38, 38, 38); "></a><a rel="#494429" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(73, 68, 41); "></a><a rel="#17365d" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(23, 54, 93); "></a><a rel="#366092" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(54, 96, 146); "></a><a rel="#953734" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(149, 55, 52); "></a><a rel="#76923c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(118, 146, 60); "></a><a rel="#5f497a" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(95, 73, 122); "></a><a rel="#92cddc" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(146, 205, 220); "></a><a rel="#e36c09" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(227, 108, 9); "></a><a rel="#c09100" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(192, 145, 0); "></a><a rel="#7f7f7f" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 127, 127); "></a><a rel="#0c0c0c" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(12, 12, 12); "></a><a rel="#1d1b10" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(29, 27, 16); "></a><a rel="#0f243e" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(15, 36, 62); "></a><a rel="#244061" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(36, 64, 97); "></a><a rel="#632423" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(99, 36, 35); "></a><a rel="#4f6128" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(79, 97, 40); "></a><a rel="#3f3151" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(63, 49, 81); "></a><a rel="#31859b" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(49, 133, 155); "></a><a rel="#974806" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(151, 72, 6); "></a><a rel="#7f6000" href="javascript:void(null);" class="redactor_color_link" style="background-color: rgb(127, 96, 0); "></a><a href="javascript:void(null);" class="redactor_color_none">None</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" class="">Align text to the left</a><a href="javascript:void(null);" class="">Center text</a><a href="javascript:void(null);" class="">Align text to the right</a><a href="javascript:void(null);" class="">Justify text</a></div><div class="datepicker dropdown-menu"><div class="datepicker-days" style="display: block; "><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">December 2012</th><th class="next">›</th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td class="day old">25</td><td class="day old">26</td><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day">1</td></tr><tr><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day active">6</td><td class="day">7</td><td class="day">8</td></tr><tr><td class="day">9</td><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td><td class="day">15</td></tr><tr><td class="day">16</td><td class="day">17</td><td class="day">18</td><td class="day">19</td><td class="day">20</td><td class="day">21</td><td class="day">22</td></tr><tr><td class="day">23</td><td class="day">24</td><td class="day">25</td><td class="day">26</td><td class="day">27</td><td class="day">28</td><td class="day">29</td></tr><tr><td class="day">30</td><td class="day">31</td><td class="day old">1</td><td class="day old">2</td><td class="day old">3</td><td class="day old">4</td><td class="day old">5</td></tr></tbody></table></div><div class="datepicker-months" style="display: none; "><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2012</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month active">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none; "><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year active">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody></table></div></div><iframe name="filepicker_comm_iframe" src="./project_files/saved_resource.html" style="display: none; "></iframe><div id="shadowMeasureIt"></div><div id="divCoordMeasureIt"></div><div id="divRectangleMeasureIt"><div id="divRectangleBGMeasureIt"></div></div></body></html>
