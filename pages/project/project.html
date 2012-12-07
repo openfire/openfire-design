@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0041)http://localhost:8000/savetheeverything/# -->
+<!-- saved from url=(0040)http://localhost:8000/savetheeverything/ -->
 <html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="./project_files/openfire.8d92848eec39.css" type="text/css">
 
 
-    <link rel="stylesheet" href="./project_files/project.fdd6892099e2.css" type="text/css">
+    <link rel="stylesheet" href="./project_files/project.11f45d3da7c0.css" type="text/css">
 
 
     </head>
@@ -65,7 +65,7 @@
         <ul class="nav pull-right">
 
                 <li class="dropdown">
-                    <a href="./project_files/project.html" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="http://localhost:8000/savetheeverything/#" class="dropdown-toggle" data-toggle="dropdown">
                         Hello, Ethan
                         <b class="caret"></b>
                     </a>
@@ -83,7 +83,7 @@
                             <li class="divider"></li>
                             <li>&nbsp;My projects</li>
 
-                                <li><a href="http://localhost:8000/savetheeverything/">Save The Everything</a></li>
+                                <li><a href="./project_files/project.html">Save The Everything</a></li>
 
 
                     </ul>
@@ -126,7 +126,7 @@
 
     <div id="project-video">
 
-        <div class="fluid-width-video-wrapper" style="padding-top: 62.5%; "><iframe src="./project_files/1635766.html" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid616843"></iframe></div>
+        <div class="fluid-width-video-wrapper" style="padding-top: 62.5%; "><iframe src="./project_files/1635766.html" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" id="fitvid973473"></iframe></div>
 
 
         <button id="choose-project-video-btn">Choose video</button>
@@ -137,7 +137,7 @@
 
                 <div id="project-tabs">
     <ul class="nav nav-tabs of-tablist">
-        <li><a href="http://localhost:8000/savetheeverything/#project-tab-details">Details</a></li>
+        <li class="active"><a href="http://localhost:8000/savetheeverything/#project-tab-details">Details</a></li>
         <li><a href="http://localhost:8000/savetheeverything/#project-tab-team">Team</a></li>
         <li><a href="http://localhost:8000/savetheeverything/#project-tab-backers">Backers</a></li>
 
@@ -145,10 +145,10 @@
 
         <li><a href="http://localhost:8000/savetheeverything/#project-tab-discussions">Discussions</a></li>
 
-            <li><a href="http://localhost:8000/savetheeverything/#project-tab-admin">Admin</a></li>
+            <li class=""><a href="http://localhost:8000/savetheeverything/#project-tab-admin">Admin</a></li>
 
 
-            <li><a href="http://localhost:8000/savetheeverything/#project-tab-bbq">BBQ</a></li>
+            <li class=""><a href="http://localhost:8000/savetheeverything/#project-tab-bbq">BBQ</a></li>
 
     </ul>
 
@@ -157,11 +157,7 @@
         <div id="project-tab-details" class="tab-pane active">
 
             <div id="project-avatar">
-                <div id="project-avatar-content">
-
-                        <img src="./project_files/LfSRP9QnSz6zmE16zhpO">
-
-                </div>
+                <div id="project-avatar-content"><img src="./project_files/SZTNF6waTiOjVPRh8Zrx"></div>
 
                     <button id="start-project-avatar-filepicker" class="small">Change Avatar</button>
 
@@ -238,7 +234,7 @@
                         <span class="role-invite-message">
                             Here is an invite to me with a custom role!
 
-                            <a href="./project_files/project.html" rel="tooltip" title="Here is an invite to me with a custom role!">...</a>
+                            <a href="http://localhost:8000/savetheeverything/#" rel="tooltip" title="Here is an invite to me with a custom role!">...</a>
 
                         </span>
                     </td>
@@ -336,7 +332,7 @@
 
         <div id="project-tab-backers" class="tab-pane">
             <div>
-                Backers: ethanethanethanethan
+                Backers: ethanethanethanethanethan
             </div>
             <div>
                 Followers: No followers.
@@ -380,6 +376,20 @@
 
 
             <div id="project-tab-admin" class="tab-pane">
+
+                <div id="owner-actions">
+    <h5>Project Owner Actions</h5>
+    <ul class="project-action-buttons">
+
+        <li><button id="project-action-cancel-project" class="of-project-action project-action btn">Cancel Project</button></li>
+
+        <li><button id="project-action-shutdown-project" class="of-project-action project-action btn">Shutdown Project</button></li>
+
+        <li><button id="project-action-close-current-project-goal" class="of-project-action project-action btn">Close Current Project Goal</button></li>
+
+    </ul>
+</div>
+
 
                 <div id="project-field-name" class="of-editable text-only project-content">
                     Save The Everything
@@ -429,48 +439,26 @@
                     <p class="met">Met: <span>False</span></p>
 
                 </div>
-
-                <div id="owner-actions">
-    <div>
-        <div class="actionbar-toggle toggle"><span class="ui-icon ui-icon-triangle-1-e"></span>Owner Actions</div>
-        <div class="actionbar-content toggle-content" style="display: none">
-            <ul class="project-action-buttons">
-
-                <li><button id="project-action-cancel-project" class="of-project-action project-action small pop">Cancel Project</button></li>
-
-                <li><button id="project-action-shutdown-project" class="of-project-action project-action small pop">Shutdown Project</button></li>
-
-                <li><button id="project-action-close-current-project-goal" class="of-project-action project-action small pop">Close Current Project Goal</button></li>
-
-            </ul>
-        </div>
-    </div>
-</div>
-
             </div>
 
 
 
             <div id="project-tab-bbq" class="tab-pane">
                 <div id="bbq-actions">
-    <div>
-        <div class="actionbar-toggle toggle"><span class="ui-icon ui-icon-triangle-1-e"></span>BBQ Actions</div>
-        <div class="actionbar-content toggle-content" style="display: none">
-            <ul class="project-action-buttons">
+    <h5>BBQ Actions</h5>
+    <ul class="project-action-buttons">
 
-                    <li><button id="project-action-bbq-feature-project" class="of-project-action project-bbq-action small pop">Feature Project</button></li>
+            <li><button id="project-action-bbq-feature-project" class="of-project-action project-bbq-action btn">Feature Project</button></li>
 
-                    <li><button id="project-action-bbq-shutdown-project" class="of-project-action project-bbq-action small pop">Shutdown Project</button></li>
+            <li><button id="project-action-bbq-shutdown-project" class="of-project-action project-bbq-action btn">Shutdown Project</button></li>
 
-                    <li><button id="project-action-close-current-project-goal" class="of-project-action project-bbq-action small pop">Close Current Project Goal</button></li>
+            <li><button id="project-action-close-current-project-goal" class="of-project-action project-bbq-action btn">Close Current Project Goal</button></li>
 
-                    <li><button id="project-action-bbq-suspend-project" class="of-project-action project-bbq-action small pop">Suspend Project</button></li>
+            <li><button id="project-action-bbq-suspend-project" class="of-project-action project-bbq-action btn">Suspend Project</button></li>
 
-                    <li><button id="project-action-bbq-cancel-project" class="of-project-action project-bbq-action small pop">Cancel Project</button></li>
+            <li><button id="project-action-bbq-cancel-project" class="of-project-action project-bbq-action btn">Cancel Project</button></li>
 
-            </ul>
-        </div>
-    </div>
+    </ul>
 </div>
 
             </div>
@@ -511,23 +499,23 @@
 
 
         <div id="current-goal-progress-bar" class="progress progress-success">
-            <div id="project-sidebar-progress-bar-text" title="Current Goal Progress" class="bar" style="width: 10%; font-size: 10px; ">
+            <div id="project-sidebar-progress-bar-text" title="Current Goal Progress" class="bar" style="width: 20%; font-size: 10px; ">
                 <div class="bar-text">
-                    10% of $10,000
+                    20% of $10,000
                 </div>
             </div>
         </div>
 
         <div id="goal-summary" class="current-goal-summary">Hire an expert consultant</div>
         <div class="current-goal-more-info">
-            <a id="current-goal-show-more-info-link" href="./project_files/project.html">more info...</a>
-            <a id="current-goal-show-less-info-link" href="./project_files/project.html" style="display: none;">less info...</a>
+            <a id="current-goal-show-more-info-link" href="http://localhost:8000/savetheeverything/#">more info...</a>
+            <a id="current-goal-show-less-info-link" href="http://localhost:8000/savetheeverything/#" style="display: none;">less info...</a>
             <div id="goal-description" class="current-goal-more-info-inline" style="height: 0px; overflow: hidden;">We'd like to find a wildlife expert who could consult with us about how to best save the rare population of filed mice in Kentucky.&nbsp;</div>
         </div>
 
         <div class="current-goal-raised">
             <div class="raised-amount">
-                $1,020
+                $2,020
             </div>
             <div class="raised-of-goal">raised towards current goal of</div>
             <div class="goal-amount">
@@ -539,7 +527,7 @@
 
         <div class="current-goal-boxes">
             <div class="current-goal-backers-box current-goal-box">
-                <div class="current-goal-backers-count box-count">3</div>
+                <div class="current-goal-backers-count box-count">4</div>
                 <div class="current-goal-box-subtext">backers</div>
             </div>
             <div class="current-goal-days-left-box current-goal-box">
@@ -762,7 +750,7 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
         <tbody>
 
             <tr class="next-step-li">
-                <td class="ns-votes">(3)</td>
+                <td class="ns-votes">(5)</td>
                 <td class="ns-input">
                     <i class="vote-minus icon-download"></i>
                     <input type="text" id="next-step-2" value="0" class="back-project-next-step-input" readonly="readonly">
@@ -1374,9 +1362,9 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
         </div>
         <ul class="pager wizard">
 
-    <li class="previous disabled"><a href="./project_files/project.html">Back</a></li>
-    <li class="next finish nav-btn-finish" style="display: none; "><a href="./project_files/project.html">Submit Payment</a></li>
-    <li class="next nav-btn-next" style=""><a href="./project_files/project.html">Next</a></li>
+    <li class="previous disabled"><a href="http://localhost:8000/savetheeverything/#">Back</a></li>
+    <li class="next finish nav-btn-finish" style="display: none; "><a href="http://localhost:8000/savetheeverything/#">Submit Payment</a></li>
+    <li class="next nav-btn-next" style=""><a href="http://localhost:8000/savetheeverything/#">Next</a></li>
 
         </ul>
     </div>
@@ -1474,7 +1462,7 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-2">
                     <span class="tier-name">Tier the second</span>
-                    <span class="tier-limits">($1000, 0/1000 backers)</span>
+                    <span class="tier-limits">($1000, 1/1000 backers)</span>
 
                 </a>
             </div>
@@ -1583,7 +1571,7 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#next-step-accordion" href="http://localhost:8000/savetheeverything/#next-step-toggle-2">
                     <span class="next-step-summary">Buy out inventory of baby seal clubs</span>
-                    <span class="next-step-num-votes">(3 votes)</span>
+                    <span class="next-step-num-votes">(5 votes)</span>
                 </a>
             </div>
 

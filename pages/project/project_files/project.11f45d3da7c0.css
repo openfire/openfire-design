@@ -346,6 +346,9 @@
     margin: 0px 5px 3px 5px; }
   .project-card .bar {
     color: black; }
+  .project-card img {
+    width: 140px;
+    height: 120px; }
 
 @media all and (max-width: 768px) {
   #project-hd {
