@@ -1,19 +1,61 @@
+// Mixins
+
+=outer-padding
+    padding: 20px
+
+=header-padding
+    margin: 0
+
+=sidebar-module
+    margin-bottom: 20px
+
+$horizontal_offset: 0
+$vertical_offset: 1px
+$blur_radius: 2px
+$spread_radius: 0
+$shadow_color: rgba( 0, 0, 0, .2)
+=shadow($h: $horizontal_offset, $v: $vertical_offset, $c: $shadow_color, $b: $blur_radius, $s: $spread_radius)
+    $value: $h $v $b $s $c
+    -moz-box-shadow: $value
+    -webkit-box-shadow: $value
+    -o-box-shadow: $value
+    box-shadow: $value
+
+// Bootstrap Accordion Overrides
+
+.accordion
+    margin: 0
+    
+.accordion-heading .accordion-toggle
+    padding: 0
+    margin-top: 5px
+
+.accordion-inner
+    margin-top: 5px
+
+.accordion-group
+    border: 0
+
+.progress
+    border-radius: 0
+    -ms-border-radius: 0
+    -moz-border-radius: 0
+    -webkit-border-radius: 0
+    -khtml-border-radius: 0
+    
+// Sidebar Container
+    
 #project-sidebar
     margin-bottom: 40px
 
+    h3,
+    h4
+        margin: 0 0 10px 0
+    
+    a
+        color: #666
+
 #sidebar-header
-    .project-name
-        font-size: 15pt
-        text-decoration: underline
-
-    .summary
-        font-size: 12pt
-
-    .project-name
-        width: 85%
-        display: inline-block
-        padding: 5px 0px 5px 5px
-
     .project-social
         width: 10%
         float: right
@@ -25,10 +67,7 @@
             border: 0px
             font-size: 7pt
 
-    .project-summary
-        padding: 0px 0px 5px 10px
-        font-size: 10pt
-        line-height: 8pt
+// Current Goal
 
 #current-goal-progress-bar
     height: 35px
@@ -36,16 +75,21 @@
 
     .bar
         padding-top: 8px
-        background-color: #00ADB8
+        background-color: red
         background-image: none
 
         .bar-text
             min-width: 160px
             color: #000000
 
-
 #current-goal
-    padding-bottom: 25px
+    background-color: black
+    color: white
+    +outer-padding
+    +shadow
+    
+    h4
+        color: yellow
 
     .current-goal-more-info
         a
@@ -56,7 +100,6 @@
             overflow: hidden
 
     .current-goal-raised
-        margin: 5px
 
         .raised-amount
             font-size: 20pt
@@ -89,31 +132,38 @@
             .current-goal-box-subtext
                 font-size: 9pt
 
-
-
 #back-project
     text-align: center
 
     #back-project-btn
         margin: 4px
 
+// Donation Tiers
+
 #tiers
-    background: #FFFFFF
+    background: yellow
+    +sidebar-module
+    +outer-padding
+    +shadow
 
     .tier-name, .tier-limits
         text-decoration: none
         display: block
-        line-height: 12pt
 
     .tier-name
-        font-size: 12pt
+        font-size: 16px
 
     .tier-limits
         font-size: 10pt
 
-#next-steps
-    background: #D6D6D6
+// Next Steps
 
+#next-steps
+    background: orange
+    +sidebar-module
+    +outer-padding
+    +shadow
+    
     .next-step-summary, .next-step-num-votes
         text-decoration: none
 
@@ -123,15 +173,30 @@
     .next-step-num-votes
         font-size: 9pt
 
+// Goals Met
+
+#completed-goals
+    background: #E3E3E1
+    +sidebar-module
+    +outer-padding
+    +shadow
+
+// Future Goal
+
+#future-goal-container
+    background: black
+    +outer-padding
+    +shadow
+    
+    h4, a, #future-goal-description
+        color: #ffffff
+    
 #add-tier, #add-next-step
     padding: 0px 3px
     float: right
     position: relative
     top: -30px
     left: -2px
-
-#future-goal
-    background: #FFFFFF
 
 
 /* Width-specific settings for the sidebar */

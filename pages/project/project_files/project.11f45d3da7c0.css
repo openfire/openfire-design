@@ -215,18 +215,34 @@
   #back-project-dlg #use-new-cc .wepay-credit {
     font-size: 10pt; }
 
+.accordion {
+  margin: 0; }
+
+.accordion-heading .accordion-toggle {
+  padding: 0;
+  margin-top: 5px; }
+
+.accordion-inner {
+  margin-top: 5px; }
+
+.accordion-group {
+  border: 0; }
+
+.progress {
+  border-radius: 0;
+  -ms-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0; }
+
 #project-sidebar {
   margin-bottom: 40px; }
+  #project-sidebar h3,
+  #project-sidebar h4 {
+    margin: 0 0 10px 0; }
+  #project-sidebar a {
+    color: #666666; }
 
-#sidebar-header .project-name {
-  font-size: 15pt;
-  text-decoration: underline; }
-#sidebar-header .summary {
-  font-size: 12pt; }
-#sidebar-header .project-name {
-  width: 85%;
-  display: inline-block;
-  padding: 5px 0px 5px 5px; }
 #sidebar-header .project-social {
   width: 10%;
   float: right;
@@ -237,41 +253,43 @@
     margin: 0px;
     border: 0px;
     font-size: 7pt; }
-#sidebar-header .project-summary {
-  padding: 0px 0px 5px 10px;
-  font-size: 10pt;
-  line-height: 8pt; }
 
 #current-goal-progress-bar {
   height: 35px;
   margin: 0px 2px; }
   #current-goal-progress-bar .bar {
     padding-top: 8px;
-    background-color: #00adb8;
+    background-color: red;
     background-image: none; }
     #current-goal-progress-bar .bar .bar-text {
       min-width: 160px;
       color: black; }
 
 #current-goal {
-  padding-bottom: 25px; }
+  background-color: black;
+  color: white;
+  padding: 20px;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  #current-goal h4 {
+    color: yellow; }
   #current-goal .current-goal-more-info a {
     float: right; }
   #current-goal .current-goal-more-info .current-goal-more-info-inline {
     width: 100%;
     height: 0px;
     overflow: hidden; }
-  #current-goal .current-goal-raised {
-    margin: 5px; }
-    #current-goal .current-goal-raised .raised-amount {
-      font-size: 20pt;
-      color: #e39600; }
-    #current-goal .current-goal-raised .raised-of-goal {
-      font-size: 8pt;
-      color: #333333; }
-    #current-goal .current-goal-raised .goal-amount {
-      font-size: 16pt;
-      color: #ba2700; }
+  #current-goal .current-goal-raised .raised-amount {
+    font-size: 20pt;
+    color: #e39600; }
+  #current-goal .current-goal-raised .raised-of-goal {
+    font-size: 8pt;
+    color: #333333; }
+  #current-goal .current-goal-raised .goal-amount {
+    font-size: 16pt;
+    color: #ba2700; }
   #current-goal .current-goal-met-date {
     font-size: 9pt;
     color: #333333; }
@@ -295,24 +313,54 @@
     margin: 4px; }
 
 #tiers {
-  background: white; }
+  background: yellow;
+  margin-bottom: 20px;
+  padding: 20px;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
   #tiers .tier-name, #tiers .tier-limits {
     text-decoration: none;
-    display: block;
-    line-height: 12pt; }
+    display: block; }
   #tiers .tier-name {
-    font-size: 12pt; }
+    font-size: 16px; }
   #tiers .tier-limits {
     font-size: 10pt; }
 
 #next-steps {
-  background: #d6d6d6; }
+  background: orange;
+  margin-bottom: 20px;
+  padding: 20px;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
   #next-steps .next-step-summary, #next-steps .next-step-num-votes {
     text-decoration: none; }
   #next-steps .next-step-summary {
     font-size: 11pt; }
   #next-steps .next-step-num-votes {
     font-size: 9pt; }
+
+#completed-goals {
+  background: #e3e3e1;
+  margin-bottom: 20px;
+  padding: 20px;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+
+#future-goal-container {
+  background: black;
+  padding: 20px;
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  #future-goal-container h4, #future-goal-container a, #future-goal-container #future-goal-description {
+    color: white; }
 
 #add-tier, #add-next-step {
   padding: 0px 3px;
@@ -321,16 +369,13 @@
   top: -30px;
   left: -2px; }
 
-#future-goal {
-  background: white; }
-
 /* Width-specific settings for the sidebar */
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) /* Narrow Desktop */ {
   #sidebar-header .project-name {
     width: 79%; }
   #sidebar-header .project-social {
     width: 15%; } }
-@media (min-width: 980px) and (max-width: 1199px) {
+@media (min-width: 980px) and (max-width: 1199px) /* Desktop */ {
   #sidebar-header .project-name {
     width: 79%; }
   #sidebar-header .project-social {
@@ -346,9 +391,6 @@
     margin: 0px 5px 3px 5px; }
   .project-card .bar {
     color: black; }
-  .project-card img {
-    width: 140px;
-    height: 120px; }
 
 @media all and (max-width: 768px) {
   #project-hd {
@@ -358,6 +400,18 @@
   #project-hd {
     padding-top: 40px;
     padding-bottom: 20px; } }
+#project-main .name-container {
+  background-color: black;
+  padding: 15px 20px; }
+  #project-main .name-container h1 {
+    color: yellow;
+    margin: 0; }
+#project-main .summary-container {
+  background-color: yellow;
+  padding: 15px 20px; }
+  #project-main .summary-container h3 {
+    margin: 0; }
+
 #owner-actions,
 #bbq-actions {
   background: #ed9e18;

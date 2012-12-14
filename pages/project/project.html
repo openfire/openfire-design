@@ -105,7 +105,18 @@
 
     <div class="container">
         <div class="row">
-            <div class="span9">
+            <div id="project-main" class="span8">
+            
+        <div class="name-container">
+            <h1>Save The Everything</h1>
+        </div>
+        
+        <div class="summary-container">
+            <h3>Save all of the animals in the whole world.</h3>
+        </div>
+
+       
+
                 <div id="video-chooser-dlg" style="display: none;" class="modal">
     <div class="dlg-hd-txt">Enter the Vimeo url and Video ID</div>
     <form>
@@ -132,8 +143,18 @@
         <button id="choose-project-video-btn">Choose video</button>
 
     </div>
+    
+             <span class="project-social">
+                <div class="project-follow">
+                    <button id="project-unfollow-btn" class="btn btn-mini" style="display: none;" title="Stop Following this Project">follower</button>
+                    <button id="project-follow-btn" class="btn btn-mini btn-info" title="Start Following this Project">follow</button>
+                </div>
+                <div class="project-share">
+                    <button id="project-share-btn" class="btn btn-mini">share</button>
+                </div>
+            </span>
 
-
+    
 
                 <div id="project-tabs">
     <ul class="nav nav-tabs of-tablist">
@@ -468,34 +489,14 @@
 </div>
 
             </div>
-            <div class="span3">
-                <div id="project-sidebar" class="boxed">
-
-    <div id="sidebar-header">
-        <div class="name-container">
-
-            <span id="project-sidebar-name" class="project-name" style="font-size: 16px; ">Save The Everything</span>
-
-            <span class="project-social">
-                <div class="project-follow">
-                    <button id="project-unfollow-btn" class="btn btn-mini" style="display: none;" title="Stop Following this Project">follower</button>
-                    <button id="project-follow-btn" class="btn btn-mini btn-info" title="Start Following this Project">follow</button>
-                </div>
-                <div class="project-share">
-                    <button id="project-share-btn" class="btn btn-mini">share</button>
-                </div>
-            </span>
-
-        </div>
-        <div id="project-sidebar-summary" class="project-summary">
-            Save all of the animals in the whole world.
-        </div>
-    </div>
-
-
+            <div class="span4">
+                <div id="project-sidebar">
 
 <div id="current-goal">
 
+	    <h4>Current Goal</h4>
+	    <h3>Hire an expert consultant</h3>
+        <div id="goal-summary" class="current-goal-summary"></div>
 
 
         <div id="current-goal-progress-bar" class="progress progress-success">
@@ -506,14 +507,12 @@
             </div>
         </div>
 
-        <div id="goal-summary" class="current-goal-summary">Hire an expert consultant</div>
         <div class="current-goal-more-info">
             <a id="current-goal-show-more-info-link" href="http://localhost:8000/savetheeverything/#">more info...</a>
             <a id="current-goal-show-less-info-link" href="http://localhost:8000/savetheeverything/#" style="display: none;">less info...</a>
-            <div id="goal-description" class="current-goal-more-info-inline" style="height: 0px; overflow: hidden;">We'd like to find a wildlife expert who could consult with us about how to best save the rare population of filed mice in Kentucky.&nbsp;</div>
-        </div>
+            <div id="goal-description" class="current-goal-more-info-inline" style="height: 0px; overflow: hidden;">
 
-        <div class="current-goal-raised">
+	    <div class="current-goal-raised">
             <div class="raised-amount">
                 $2,020
             </div>
@@ -523,6 +522,8 @@
             </div>
         </div>
 
+            We'd like to find a wildlife expert who could consult with us about how to best save the rare population of filed mice in Kentucky.&nbsp;</div>
+        </div>
 
 
         <div class="current-goal-boxes">
@@ -618,14 +619,14 @@
     <button id="close-goal-btn">Cancel</button>
 </div>
 
+    <div id="back-project">
+        <button id="back-project-btn" class="btn btn-warning btn-large">Back Project</button>
+    </div>
 
 </div>
 
 
 
-    <div id="back-project">
-        <button id="back-project-btn" class="btn btn-warning btn-large">Back Project</button>
-    </div>
     <div id="back-project-dlg" style="display: none;" class="modal of-wizard-modal" data-backdrop="static">
     <div id="donate-wizard" class="of-wizard">
         <div class="hd">
@@ -1419,21 +1420,19 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
 </div>
 
 <div id="tiers">
-    <h6>Donation Tiers</h6>
-
-        <button id="add-tier" class="btn btn-mini btn-info">Add Tier</button>
+    <h4>Donation Tiers +</h4>
 
     <div class="accordion" id="tier-accordion">
 
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-1">
-                    <span class="tier-name">Tier the First</span>
-                    <span class="tier-limits">($10, 2/1000 backers)</span>
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-1">
+                    <span class="tier-name">Tier the First $10</span>
+                    <span class="tier-limits">(2/1000 backers)</span>
 
                 </a>
             </div>
 
-            <div id="tier-1" class="tier accordion-body collapse in">
+            <div id="tier-1" class="tier accordion-body collapse">
                 <div class="accordion-inner">
 
                     <div>
@@ -1460,14 +1459,14 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
             </div>
 
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-2">
-                    <span class="tier-name">Tier the second</span>
-                    <span class="tier-limits">($1000, 1/1000 backers)</span>
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-2">
+                    <span class="tier-name">Tier the second $1,000</span>
+                    <span class="tier-limits">(1/1000 backers)</span>
 
                 </a>
             </div>
 
-            <div id="tier-2" class="tier accordion-body collapse in">
+            <div id="tier-2" class="tier accordion-body collapse">
                 <div class="accordion-inner">
 
                     <div>
@@ -1494,14 +1493,14 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
             </div>
 
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-3">
-                    <span class="tier-name">Tier the third</span>
-                    <span class="tier-limits">($10000, 1/10 backers)</span>
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#tier-accordion" href="http://localhost:8000/savetheeverything/#tier-3">
+                    <span class="tier-name">Tier the third $10,000</span>
+                    <span class="tier-limits">(1/10 backers)</span>
 
                 </a>
             </div>
 
-            <div id="tier-3" class="tier accordion-body collapse in">
+            <div id="tier-3" class="tier accordion-body collapse">
                 <div class="accordion-inner">
 
                     <div>
@@ -1561,21 +1560,41 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
     </div>
 </div>
 
-<div id="next-steps">
-    <h6>Next Steps</h6>
 
-        <button id="add-next-step" class="btn btn-mini btn-info">Add a Next Step</button>
+<div id="completed-goals">
+    <h4>Goals Met</h4>
+    <div class="accordion" id="completed-goals-accordion">
+
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#completed-goals-accordion" href="http://localhost:8000/savetheeverything/#completed-goal-1">
+                    $10,000: Succeeded (123%)
+                </a>
+            </div>
+            <div id="completed-goal-1" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    Create a website and use it to organize.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="next-steps">
+    <h4>Next Steps +</h4>
 
     <div class="accordion" id="next-step-accordion">
 
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#next-step-accordion" href="http://localhost:8000/savetheeverything/#next-step-toggle-2">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#next-step-accordion" href="http://localhost:8000/savetheeverything/#next-step-toggle-2">
                     <span class="next-step-summary">Buy out inventory of baby seal clubs</span>
                     <span class="next-step-num-votes">(5 votes)</span>
                 </a>
             </div>
 
-            <div id="next-step-toggle-2" class="next-step accordion-body collapse in">
+            <div id="next-step-toggle-2" class="next-step accordion-body collapse">
                 <div class="accordion-inner">
                     <div>
                         <span class="next-step-description"><p>Too many baby seals are being clubbed, possibly due to ability to find baby seal clubs very easily on the open market. Raise money to buy up all the current inventory, making it harder for those damn clubbers.</p></span>
@@ -1597,13 +1616,13 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
             </div>
 
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#next-step-accordion" href="http://localhost:8000/savetheeverything/#next-step-toggle-1">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#next-step-accordion" href="http://localhost:8000/savetheeverything/#next-step-toggle-1">
                     <span class="next-step-summary">Build a habitat</span>
                     <span class="next-step-num-votes">(1 votes)</span>
                 </a>
             </div>
 
-            <div id="next-step-toggle-1" class="next-step accordion-body collapse in">
+            <div id="next-step-toggle-1" class="next-step accordion-body collapse">
                 <div class="accordion-inner">
                     <div>
                         <span class="next-step-description"><p>Buy some land somewhere and use it to build a habitat for the field mice.</p></span>
@@ -1629,29 +1648,6 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
 </div>
 
 
-
-
-<div id="completed-goals">
-    <h6>Past Goals</h6>
-    <div class="accordion" id="completed-goals-accordion">
-
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#completed-goals-accordion" href="http://localhost:8000/savetheeverything/#completed-goal-1">
-                    $10,000: Succeeded (123%)
-                </a>
-            </div>
-            <div id="completed-goal-1" class="accordion-body collapse in">
-                <div class="accordion-inner">
-                    Create a website and use it to organize.
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
     <div id="future-goal-container">
     <div id="future-goal-dlg" style="display: none;" class="modal">
     <div "dlg-hd-txt"="">Future Goal</div>
@@ -1672,15 +1668,15 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
     <button id="close-future-goal-btn">Cancel</button>
 </div>
 
-    <h6>Future Goal</h6>
+    <h4>Future Goal</h4>
 
         <div class="accordion" id="future-goal-accordion">
             <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#future-goal-accordion" href="http://localhost:8000/savetheeverything/#future-goal">
-                    Save all the animals. All of them.
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#future-goal-accordion" href="http://localhost:8000/savetheeverything/#future-goal">
+                    <h3>Save all the animals. All of them.</h3>
                 </a>
             </div>
-            <div id="future-goal" class="accordion-body collapse in">
+            <div id="future-goal" class="accordion-body collapse">
                 <div class="accordion-inner">
 
                     <span id="future-goal-description" class="description">Save every endangered species that we can find, and maybe even help find new ones.</span>
