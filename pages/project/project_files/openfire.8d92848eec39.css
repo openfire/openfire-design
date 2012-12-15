@@ -76,7 +76,7 @@
     height: 81%; } }
 body {
   background-color: #ededeb;
-  color: black; }
+  color: #333333; }
 
 .boxed {
   border: 1px solid black; }

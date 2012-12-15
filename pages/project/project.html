@@ -492,6 +492,10 @@
             <div class="span4">
                 <div id="project-sidebar">
 
+    <div id="back-project">
+        <button id="back-project-btn" class="btn btn-large">Back Project</button>
+    </div>
+
 <div id="current-goal">
 
 	    <h4>Current Goal</h4>
@@ -618,10 +622,6 @@
     <button id="save-goal-btn">Save</button>
     <button id="close-goal-btn">Cancel</button>
 </div>
-
-    <div id="back-project">
-        <button id="back-project-btn" class="btn btn-warning btn-large">Back Project</button>
-    </div>
 
 </div>
 
@@ -1372,12 +1372,6 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
 </div>
 
 
-
-
-
-
-
-
 <div id="tier-dlg" style="display: none;" class="modal">
     <div "dlg-hd-txt"="">Tier</div>
     <form id="tier-dlg-frm">
@@ -1420,7 +1414,7 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
 </div>
 
 <div id="tiers">
-    <h4>Donation Tiers +</h4>
+    <h4>Goal Tiers +</h4>
 
     <div class="accordion" id="tier-accordion">
 
@@ -1530,7 +1524,6 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
     <span style="display: none;" id="tier-goal">2</span>
 </div>
 
-
 <div id="next-step-dlg" style="display: none;" class="modal">
     <div "dlg-hd-txt"="">Next Step</div>
     <form id="next-step-dlg-frm">
@@ -1560,30 +1553,58 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
     </div>
 </div>
 
+    <div id="future-goal-container">
+    <div id="future-goal-dlg" style="display: none;" class="modal">
+    <div "dlg-hd-txt"="">Future Goal</div>
+    <form id="future-goal-dlg-frm">
+    <fieldset>
+        <p>
+            <label for="future-goal-summary-input">Summary</label>
+            <input id="future-goal-summary-input" type="text">
+        </p>
+        <p>
+            <label for="future-goal-description-input">Description</label>
+            <div class="redactor_box"><ul class="redactor_toolbar"><li><a href="javascript:void(null);" title="HTML" class="redactor_btn_html"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Formatting" class="redactor_btn_formatting"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Bold" class="redactor_btn_bold"></a></li><li><a href="javascript:void(null);" title="Italic" class="redactor_btn_italic"></a></li><li><a href="javascript:void(null);" title="Deleted" class="redactor_btn_deleted"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist"></a></li><li><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist"></a></li><li><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent"></a></li><li><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent"></a></li><li><a href="javascript:void(null);" title="Link" class="redactor_btn_link"></a></li><li><a href="javascript:void(null);" title="Font Color" class="redactor_btn_fontcolor"></a></li><li><a href="javascript:void(null);" title="Back Color" class="redactor_btn_backcolor"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Insert Horizontal Rule" class="redactor_btn_horizontalrule"></a></li></ul><div class="redactor_editor-field redactor_editor" contenteditable="true" dir="ltr"><p><br></p></div><textarea id="future-goal-description-input" class="editor-field" style="display: none; "></textarea></div>
+            <input type="hidden" id="future-goal-id-input">
+        </p>
+    </fieldset>
+    </form>
+    <button id="save-future-goal-btn">Save</button>
+    <button id="close-future-goal-btn">Cancel</button>
+</div>
 
-<div id="completed-goals">
-    <h4>Goals Met</h4>
-    <div class="accordion" id="completed-goals-accordion">
+    <h4>Future Goal</h4>
 
-        <div class="accordion-group">
+        <div class="accordion" id="future-goal-accordion">
             <div class="accordion-heading">
-                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#completed-goals-accordion" href="http://localhost:8000/savetheeverything/#completed-goal-1">
-                    $10,000: Succeeded (123%)
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#future-goal-accordion" href="http://localhost:8000/savetheeverything/#future-goal">
+                    <h3>Save all the animals. All of them.</h3>
                 </a>
             </div>
-            <div id="completed-goal-1" class="accordion-body collapse">
+            <div id="future-goal" class="accordion-body collapse">
                 <div class="accordion-inner">
-                    Create a website and use it to organize.
+
+                    <span id="future-goal-description" class="description">Save every endangered species that we can find, and maybe even help find new ones.</span>
+                    <div>Met: Not yet</div>
+
+
+                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
+                        <div class="toggle-admin-content" style="display: none;">
+                            <span style="display: none;" id="future-goal-id">1</span>
+                            <span id="future-goal-summary" style="display: none;">Save all the animals. All of them.</span>
+                            <button id="edit-future-goal" class="small">Edit Future Goal</button>
+                        </div>
+
+
                 </div>
+
             </div>
         </div>
 
-    </div>
 </div>
 
-
 <div id="next-steps">
-    <h4>Next Steps +</h4>
+    <h4>Next Goals +</h4>
 
     <div class="accordion" id="next-step-accordion">
 
@@ -1647,56 +1668,26 @@ Thank you for your help! <a onclick="document.location.reload();">Refresh the pa
     <span style="display: none;" id="next-step-goal">2</span>
 </div>
 
+<div id="completed-goals">
+    <h4>Goals Met</h4>
+    <div class="accordion" id="completed-goals-accordion">
 
-    <div id="future-goal-container">
-    <div id="future-goal-dlg" style="display: none;" class="modal">
-    <div "dlg-hd-txt"="">Future Goal</div>
-    <form id="future-goal-dlg-frm">
-    <fieldset>
-        <p>
-            <label for="future-goal-summary-input">Summary</label>
-            <input id="future-goal-summary-input" type="text">
-        </p>
-        <p>
-            <label for="future-goal-description-input">Description</label>
-            <div class="redactor_box"><ul class="redactor_toolbar"><li><a href="javascript:void(null);" title="HTML" class="redactor_btn_html"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Formatting" class="redactor_btn_formatting"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Bold" class="redactor_btn_bold"></a></li><li><a href="javascript:void(null);" title="Italic" class="redactor_btn_italic"></a></li><li><a href="javascript:void(null);" title="Deleted" class="redactor_btn_deleted"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist"></a></li><li><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist"></a></li><li><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent"></a></li><li><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent"></a></li><li><a href="javascript:void(null);" title="Link" class="redactor_btn_link"></a></li><li><a href="javascript:void(null);" title="Font Color" class="redactor_btn_fontcolor"></a></li><li><a href="javascript:void(null);" title="Back Color" class="redactor_btn_backcolor"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment"></a></li><li class="redactor_separator"></li><li><a href="javascript:void(null);" title="Insert Horizontal Rule" class="redactor_btn_horizontalrule"></a></li></ul><div class="redactor_editor-field redactor_editor" contenteditable="true" dir="ltr"><p><br></p></div><textarea id="future-goal-description-input" class="editor-field" style="display: none; "></textarea></div>
-            <input type="hidden" id="future-goal-id-input">
-        </p>
-    </fieldset>
-    </form>
-    <button id="save-future-goal-btn">Save</button>
-    <button id="close-future-goal-btn">Cancel</button>
-</div>
-
-    <h4>Future Goal</h4>
-
-        <div class="accordion" id="future-goal-accordion">
+        <div class="accordion-group">
             <div class="accordion-heading">
-                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#future-goal-accordion" href="http://localhost:8000/savetheeverything/#future-goal">
-                    <h3>Save all the animals. All of them.</h3>
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#completed-goals-accordion" href="http://localhost:8000/savetheeverything/#completed-goal-1">
+                    $10,000: Succeeded (123%)
                 </a>
             </div>
-            <div id="future-goal" class="accordion-body collapse">
+            <div id="completed-goal-1" class="accordion-body collapse">
                 <div class="accordion-inner">
-
-                    <span id="future-goal-description" class="description">Save every endangered species that we can find, and maybe even help find new ones.</span>
-                    <div>Met: Not yet</div>
-
-
-                        <div class="toggle-admin">admin<span class="ui-icon ui-icon-triangle-1-w"></span></div>
-                        <div class="toggle-admin-content" style="display: none;">
-                            <span style="display: none;" id="future-goal-id">1</span>
-                            <span id="future-goal-summary" style="display: none;">Save all the animals. All of them.</span>
-                            <button id="edit-future-goal" class="small">Edit Future Goal</button>
-                        </div>
-
-
+                    Create a website and use it to organize.
                 </div>
-
             </div>
         </div>
 
+    </div>
 </div>
+
 
 
 </div>

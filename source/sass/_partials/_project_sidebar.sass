@@ -1,12 +1,16 @@
 // Mixins
 
-=outer-padding
+=module-padding
     padding: 20px
 
 =header-padding
     margin: 0
 
 =sidebar-module
+    margin-bottom: 20px
+
+=sidebar-footer-module
+    border-top: 2px solid white      
     margin-bottom: 20px
 
 $horizontal_offset: 0
@@ -21,6 +25,21 @@ $shadow_color: rgba( 0, 0, 0, .2)
     -o-box-shadow: $value
     box-shadow: $value
 
+=box-emboss($opacity, $opacity2)
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+
+$default_rounded_amount: 0
+=round-corners($amount: $default_rounded_amount)
+    border-radius: $amount
+    -moz-border-radius: $amount
+    -webkit-border-radius: $amount
+
+=border($width: 1px,$style: solid,$color: #000,$radius: 0)
+    border: $width $style $color
+
+=no-side-border($side)
+    border-#{$side}: 0
+  
 // Bootstrap Accordion Overrides
 
 .accordion
@@ -51,6 +70,9 @@ $shadow_color: rgba( 0, 0, 0, .2)
     h3,
     h4
         margin: 0 0 10px 0
+    
+    h3
+        font-weight: 200
     
     a
         color: #666
@@ -83,13 +105,12 @@ $shadow_color: rgba( 0, 0, 0, .2)
             color: #000000
 
 #current-goal
-    background-color: black
-    color: white
-    +outer-padding
+    background-color: white
+    +module-padding
     +shadow
     
     h4
-        color: yellow
+        color: #666666
 
     .current-goal-more-info
         a
@@ -102,49 +123,45 @@ $shadow_color: rgba( 0, 0, 0, .2)
     .current-goal-raised
 
         .raised-amount
-            font-size: 20pt
+            font-size: 20px
             color: #E39600
         .raised-of-goal
-            font-size: 8pt
+            font-size: 8px
             color: #333
         .goal-amount
-            font-size: 16pt
+            font-size: 16px
             color: #BA2700
 
     .current-goal-met-date
-        font-size: 9pt
+        font-size: 9px
         color: #333
 
     .current-goal-boxes
+        margin-top: 5px
         text-align: center
 
         .current-goal-box
+            color: #999999
             display: inline-block
-            width: 30%
+            width: 32%
             height: 60px
-            border: 1px solid black
-            border-radius: 2px
 
             .box-count
-                font-size: 14pt
+                font-size: 28px
+                font-weight: bold
                 margin-top: 12px
 
             .current-goal-box-subtext
-                font-size: 9pt
-
-#back-project
-    text-align: center
-
-    #back-project-btn
-        margin: 4px
+                font-size: 12px
 
 // Donation Tiers
 
 #tiers
-    background: yellow
-    +sidebar-module
-    +outer-padding
+    background: white
+    border-top: 1px dotted #c9c9c9
+    +module-padding
     +shadow
+    +sidebar-module
 
     .tier-name, .tier-limits
         text-decoration: none
@@ -156,13 +173,29 @@ $shadow_color: rgba( 0, 0, 0, .2)
     .tier-limits
         font-size: 10pt
 
+// Back Project Button
+
+#back-project
+    text-align: center
+    +shadow
+    
+    .btn
+        +no-side-border(left)
+        +no-side-border(right)                                    
+        +round-corners
+        display: block
+        margin: 0
+        width: 100%
+
+    #back-project-btn
+
 // Next Steps
 
 #next-steps
-    background: orange
-    +sidebar-module
-    +outer-padding
-    +shadow
+    +sidebar-footer-module
+    
+    h4
+        margin-top: 12px
     
     .next-step-summary, .next-step-num-votes
         text-decoration: none
@@ -176,21 +209,19 @@ $shadow_color: rgba( 0, 0, 0, .2)
 // Goals Met
 
 #completed-goals
-    background: #E3E3E1
-    +sidebar-module
-    +outer-padding
-    +shadow
+    +sidebar-footer-module
+    
+    h4
+        margin-top: 12px
 
 // Future Goal
 
 #future-goal-container
-    background: black
-    +outer-padding
+    background-color: white
+    +module-padding
     +shadow
-    
-    h4, a, #future-goal-description
-        color: #ffffff
-    
+    +sidebar-module
+
 #add-tier, #add-next-step
     padding: 0px 3px
     float: right

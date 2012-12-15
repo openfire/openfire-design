@@ -4,6 +4,9 @@
 @import _partials/project_sidebar
 @import _partials/project_card
 
+=letterpress( $outerOpacity: .35, $innerOpacity: .35 )
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, $innerOpacity), 0 1px 0 rgba(255, 255, 255, $outerOpacity)
+
 @media all and (max-width: 768px)
     #project-hd
         padding-top: 60px
@@ -15,20 +18,23 @@
         padding-bottom: 20px
 
 #project-main
+    +shadow
 
     .name-container
-        background-color: black
-        padding: 15px 20px
+        text-align: center
+        padding: 15px 20px 0
         
         h1
-            color: yellow
+            +letterpress
+            color: #5A5A5A
             margin: 0
     
     .summary-container
-        background-color: yellow
+        text-align: center    
         padding: 15px 20px
         
         h3
+            font-weight: 200
             margin: 0
         
     

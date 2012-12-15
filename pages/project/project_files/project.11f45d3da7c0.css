@@ -240,6 +240,8 @@
   #project-sidebar h3,
   #project-sidebar h4 {
     margin: 0 0 10px 0; }
+  #project-sidebar h3 {
+    font-weight: 200; }
   #project-sidebar a {
     color: #666666; }
 
@@ -266,15 +268,14 @@
       color: black; }
 
 #current-goal {
-  background-color: black;
-  color: white;
+  background-color: white;
   padding: 20px;
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
   #current-goal h4 {
-    color: yellow; }
+    color: #666666; }
   #current-goal .current-goal-more-info a {
     float: right; }
   #current-goal .current-goal-more-info .current-goal-more-info-inline {
@@ -282,44 +283,41 @@
     height: 0px;
     overflow: hidden; }
   #current-goal .current-goal-raised .raised-amount {
-    font-size: 20pt;
+    font-size: 20px;
     color: #e39600; }
   #current-goal .current-goal-raised .raised-of-goal {
-    font-size: 8pt;
+    font-size: 8px;
     color: #333333; }
   #current-goal .current-goal-raised .goal-amount {
-    font-size: 16pt;
+    font-size: 16px;
     color: #ba2700; }
   #current-goal .current-goal-met-date {
-    font-size: 9pt;
+    font-size: 9px;
     color: #333333; }
   #current-goal .current-goal-boxes {
+    margin-top: 5px;
     text-align: center; }
     #current-goal .current-goal-boxes .current-goal-box {
+      color: #999999;
       display: inline-block;
-      width: 30%;
-      height: 60px;
-      border: 1px solid black;
-      border-radius: 2px; }
+      width: 32%;
+      height: 60px; }
       #current-goal .current-goal-boxes .current-goal-box .box-count {
-        font-size: 14pt;
+        font-size: 28px;
+        font-weight: bold;
         margin-top: 12px; }
       #current-goal .current-goal-boxes .current-goal-box .current-goal-box-subtext {
-        font-size: 9pt; }
-
-#back-project {
-  text-align: center; }
-  #back-project #back-project-btn {
-    margin: 4px; }
+        font-size: 12px; }
 
 #tiers {
-  background: yellow;
-  margin-bottom: 20px;
+  background: white;
+  border-top: 1px dotted #c9c9c9;
   padding: 20px;
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; }
   #tiers .tier-name, #tiers .tier-limits {
     text-decoration: none;
     display: block; }
@@ -328,14 +326,27 @@
   #tiers .tier-limits {
     font-size: 10pt; }
 
-#next-steps {
-  background: orange;
-  margin-bottom: 20px;
-  padding: 20px;
+#back-project {
+  text-align: center;
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  #back-project .btn {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    display: block;
+    margin: 0;
+    width: 100%; }
+
+#next-steps {
+  border-top: 2px solid white;
+  margin-bottom: 20px; }
+  #next-steps h4 {
+    margin-top: 12px; }
   #next-steps .next-step-summary, #next-steps .next-step-num-votes {
     text-decoration: none; }
   #next-steps .next-step-summary {
@@ -344,23 +355,19 @@
     font-size: 9pt; }
 
 #completed-goals {
-  background: #e3e3e1;
-  margin-bottom: 20px;
-  padding: 20px;
-  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  border-top: 2px solid white;
+  margin-bottom: 20px; }
+  #completed-goals h4 {
+    margin-top: 12px; }
 
 #future-goal-container {
-  background: black;
+  background-color: white;
   padding: 20px;
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
-  #future-goal-container h4, #future-goal-container a, #future-goal-container #future-goal-description {
-    color: white; }
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; }
 
 #add-tier, #add-next-step {
   padding: 0px 3px;
@@ -400,17 +407,24 @@
   #project-hd {
     padding-top: 40px;
     padding-bottom: 20px; } }
-#project-main .name-container {
-  background-color: black;
-  padding: 15px 20px; }
-  #project-main .name-container h1 {
-    color: yellow;
-    margin: 0; }
-#project-main .summary-container {
-  background-color: yellow;
-  padding: 15px 20px; }
-  #project-main .summary-container h3 {
-    margin: 0; }
+#project-main {
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+  #project-main .name-container {
+    text-align: center;
+    padding: 15px 20px 0; }
+    #project-main .name-container h1 {
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.35);
+      color: #5a5a5a;
+      margin: 0; }
+  #project-main .summary-container {
+    text-align: center;
+    padding: 15px 20px; }
+    #project-main .summary-container h3 {
+      font-weight: 200;
+      margin: 0; }
 
 #owner-actions,
 #bbq-actions {
